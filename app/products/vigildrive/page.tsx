@@ -46,14 +46,14 @@ export default function VigilDrivePage() {
 
         {/* Vision Area Mockup */}
         <div className="relative mb-32 max-w-5xl mx-auto rounded-[2rem] overflow-hidden bg-slate-900 border border-white/10 aspect-video shadow-2xl shadow-red-500/20 group">
-            {/* Background Image - Bright, Clear Driver Face & Car Interior */}
+            {/* Background Image - Local dms.png */}
             <div 
-              className="absolute inset-0 bg-cover bg-[center_top] transition-transform duration-1000 group-hover:scale-105" 
-              style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?auto=format&fit=crop&q=80&w=2000")' }}
+              className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" 
+              style={{ backgroundImage: 'url("/dms.png")' }}
             >
-              {/* Light Camera Overlay - More transparent to keep face visible */}
-              <div className="absolute inset-0 bg-black/20" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              {/* Subtle Camera Overlays */}
+              <div className="absolute inset-0 bg-black/10" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
             </div>
 
             {/* AI HUD Overlay */}
@@ -65,24 +65,20 @@ export default function VigilDrivePage() {
                       <span className="text-white font-mono text-xs md:text-sm tracking-[0.3em] font-bold drop-shadow-md">LIVE HD · DMS_SYSTEM</span>
                    </div>
 
-                   {/* Face Mesh / Points Overlay - Highly Visible */}
-                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[45%] w-56 h-72 md:w-72 md:h-96 border-2 border-red-500/40 rounded-[3.5rem] hidden md:block backdrop-blur-[1px]">
+                   {/* Face Mesh / Points Overlay - Adjusted for clarity over local image */}
+                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[45%] w-56 h-72 md:w-72 md:h-96 border-2 border-red-500/30 rounded-[3.5rem] hidden md:block backdrop-blur-[0.5px]">
                       {/* Tracking Points - Eyes, Nose, Mouth */}
-                      <div className="absolute top-[32%] left-[28%] w-2.5 h-2.5 bg-red-500 rounded-full shadow-[0_0_12px_#ef4444] z-20" />
-                      <div className="absolute top-[32%] right-[28%] w-2.5 h-2.5 bg-red-500 rounded-full shadow-[0_0_12px_#ef4444] z-20" />
-                      <div className="absolute top-[48%] left-1/2 -translate-x-1/2 w-2 h-2 bg-red-500/80 rounded-full" />
+                      <div className="absolute top-[32%] left-[28%] w-2 h-2 bg-red-500 rounded-full shadow-[0_0_8px_#ef4444] z-20" />
+                      <div className="absolute top-[32%] right-[28%] w-2 h-2 bg-red-500 rounded-full shadow-[0_0_8px_#ef4444] z-20" />
                       
-                      {/* Mouth Tracking */}
-                      <div className="absolute bottom-[22%] left-1/2 -translate-x-1/2 w-12 h-3 border-b-2 border-red-500/60 rounded-full" />
-                      
-                      {/* Scanning Line - Faster and more visible */}
+                      {/* Scanning Line */}
                       <div className="absolute inset-0 overflow-hidden rounded-[3.5rem]">
-                         <div className="w-full h-2 bg-red-500/50 absolute top-0 animate-scan shadow-[0_0_20px_rgba(239,68,68,0.8)]" />
+                         <div className="w-full h-1 bg-red-500/40 absolute top-0 animate-scan shadow-[0_0_15px_rgba(239,68,68,0.5)]" />
                       </div>
 
                       {/* AI Status Label */}
-                      <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-red-600 text-white text-[10px] font-mono px-4 py-1.5 rounded-full uppercase tracking-widest font-bold shadow-lg">
-                         VigilDrive AI: ACTIVE
+                      <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-red-600/90 text-white text-[9px] font-mono px-4 py-1.5 rounded-full uppercase tracking-widest font-bold shadow-lg backdrop-blur-sm">
+                         DMS TRACKING: ACTIVE
                       </div>
                    </div>
 
