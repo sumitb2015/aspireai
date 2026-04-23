@@ -45,40 +45,94 @@ export default function VigilDrivePage() {
         </div>
 
         {/* Vision Area Mockup */}
-        <div className="relative mb-32 max-w-5xl mx-auto rounded-[2rem] overflow-hidden bg-slate-900 border border-white/10 aspect-video flex items-center justify-center shadow-2xl shadow-red-500/10">
-            <div className="absolute inset-0 bg-gradient-to-br from-red-500/20 to-transparent opacity-50" />
-            <div className="relative z-10 flex flex-col items-center gap-6">
-                <div className="relative">
-                   <div className="absolute -inset-8 border border-red-500/50 rounded-full animate-ping opacity-25" />
-                   <Eye className="text-red-500" size={80} />
-                </div>
-                <div className="text-center">
-                    <p className="font-mono text-red-500 text-sm mb-2 uppercase tracking-widest font-bold">Scanning Driver State...</p>
-                    <div className="flex gap-2 justify-center">
-                        <div className="h-1.5 w-12 bg-red-500 rounded-full" />
-                        <div className="h-1.5 w-8 bg-red-500/30 rounded-full" />
-                        <div className="h-1.5 w-16 bg-red-500/30 rounded-full" />
-                    </div>
+        <div className="relative mb-32 max-w-5xl mx-auto rounded-[2rem] overflow-hidden bg-slate-900 border border-white/10 aspect-video shadow-2xl shadow-red-500/10 group">
+            {/* Background Image - Professional Car Interior */}
+            <div 
+              className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" 
+              style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=2000")' }}
+            >
+              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors" />
+            </div>
+
+            {/* AI HUD Overlay */}
+            <div className="absolute inset-0 flex items-center justify-center">
+                <div className="relative w-full h-full p-8 md:p-12">
+                   {/* Face Mesh / Points Overlay (Simulated) */}
+                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-80 border-2 border-red-500/20 rounded-[3rem] hidden md:block">
+                      <div className="absolute top-1/4 left-1/4 w-4 h-4 border-t-2 border-l-2 border-red-500" />
+                      <div className="absolute top-1/4 right-1/4 w-4 h-4 border-t-2 border-r-2 border-red-500" />
+                      <div className="absolute bottom-1/3 left-1/2 -translate-x-1/2 w-8 h-1 bg-red-500/50 rounded-full" />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                         <div className="w-full h-[1px] bg-red-500/10 animate-scan shadow-[0_0_15px_rgba(239,68,68,0.5)]" />
+                      </div>
+                   </div>
+
+                   {/* Corner UI Elements */}
+                   <div className="absolute top-8 left-8 flex flex-col gap-4">
+                      <div className="p-4 rounded-xl bg-black/60 backdrop-blur-md border border-white/10 w-48">
+                         <p className="text-[10px] font-mono text-white/50 uppercase mb-1 tracking-widest">Driver Identity</p>
+                         <p className="text-sm font-mono text-white font-bold">#DRIVER_A_842</p>
+                         <div className="mt-2 h-1 w-full bg-white/10 rounded-full overflow-hidden">
+                            <div className="h-full bg-green-500 w-[94%]" />
+                         </div>
+                      </div>
+                      <div className="p-4 rounded-xl bg-black/60 backdrop-blur-md border border-white/10 w-48">
+                         <p className="text-[10px] font-mono text-white/50 uppercase mb-1 tracking-widest">Eye Closure Rate</p>
+                         <p className="text-xl font-mono text-white font-bold">2.4% <span className="text-[10px] text-green-400 font-normal ml-1">Normal</span></p>
+                      </div>
+                   </div>
+
+                   <div className="absolute top-8 right-8 flex flex-col items-end gap-4">
+                      <div className="p-4 rounded-xl bg-black/60 backdrop-blur-md border border-white/10 text-right">
+                         <p className="text-[10px] font-mono text-white/50 uppercase mb-1 tracking-widest">System Status</p>
+                         <div className="flex items-center gap-2 justify-end">
+                            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                            <p className="text-sm font-mono text-white font-bold uppercase">Active · 60 FPS</p>
+                         </div>
+                      </div>
+                      <div className="p-4 rounded-xl bg-red-500/20 backdrop-blur-md border border-red-500/30 text-right">
+                         <p className="text-[10px] font-mono text-red-200 uppercase mb-1 tracking-widest">Risk Level</p>
+                         <p className="text-xl font-mono text-red-400 font-bold uppercase">Minimal</p>
+                      </div>
+                   </div>
+
+                   {/* Bottom UI - Telemetry */}
+                   <div className="absolute bottom-8 left-8 right-8 flex justify-between items-end">
+                      <div className="flex gap-4">
+                         <div className="p-4 rounded-2xl bg-black/60 backdrop-blur-md border border-white/10 flex items-center gap-4">
+                            <div className="p-2 rounded-lg bg-red-500/20 text-red-500">
+                               <Activity size={20} />
+                            </div>
+                            <div>
+                               <p className="text-[10px] font-mono text-white/50 uppercase tracking-tighter">Heart Rate (Est.)</p>
+                               <p className="text-lg font-mono text-white font-bold">72 BPM</p>
+                            </div>
+                         </div>
+                         <div className="hidden md:flex p-4 rounded-2xl bg-black/60 backdrop-blur-md border border-white/10 items-center gap-4">
+                            <div className="p-2 rounded-lg bg-blue-500/20 text-blue-500">
+                               <Cloud size={20} />
+                            </div>
+                            <div>
+                               <p className="text-[10px] font-mono text-white/50 uppercase tracking-tighter">Cloud Sync</p>
+                               <p className="text-lg font-mono text-white font-bold">LIVE</p>
+                            </div>
+                         </div>
+                      </div>
+                      
+                      <div className="flex flex-col items-end gap-2">
+                         <div className="px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 flex items-center gap-3">
+                            <div className="w-2 h-2 bg-red-500 rounded-full animate-ping" />
+                            <span className="text-[10px] font-mono text-white uppercase tracking-[0.2em]">Recording Session</span>
+                         </div>
+                         <p className="text-[10px] font-mono text-white/30">LAT: 18.5204 | LONG: 73.8567</p>
+                      </div>
+                   </div>
                 </div>
             </div>
-            <div className="absolute bottom-8 left-8 right-8 flex justify-between items-end">
-                <div className="space-y-2">
-                    <div className="h-2 w-48 bg-white/10 rounded-full" />
-                    <div className="h-2 w-32 bg-white/10 rounded-full" />
-                </div>
-                <div className="p-4 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10">
-                    <Activity className="text-red-500 animate-pulse" size={32} />
-                </div>
-            </div>
-            
-            {/* UI Overlays */}
-            <div className="absolute top-8 left-8 p-4 rounded-xl bg-black/40 backdrop-blur-sm border border-white/10">
-                <p className="text-[10px] font-mono text-white/50 uppercase mb-1">Detection Latency</p>
-                <p className="text-xl font-mono text-green-400 font-bold">12ms</p>
-            </div>
-            <div className="absolute top-8 right-8 p-4 rounded-xl bg-black/40 backdrop-blur-sm border border-white/10">
-                <p className="text-[10px] font-mono text-white/50 uppercase mb-1">Safety Status</p>
-                <p className="text-xl font-mono text-blue-400 font-bold">NOMINAL</p>
+
+            {/* Scanning Line Animation Effect */}
+            <div className="absolute inset-0 pointer-events-none overflow-hidden">
+                <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-red-500/50 to-transparent absolute top-0 animate-scan-y opacity-30" />
             </div>
         </div>
 
