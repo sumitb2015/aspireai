@@ -46,24 +46,32 @@ export default function VigilDrivePage() {
 
         {/* Vision Area Mockup */}
         <div className="relative mb-32 max-w-5xl mx-auto rounded-[2rem] overflow-hidden bg-slate-900 border border-white/10 aspect-video shadow-2xl shadow-red-500/10 group">
-            {/* Background Image - Professional Car Interior */}
+            {/* Background Image - Driver Face Focus */}
             <div 
               className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" 
-              style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=2000")' }}
+              style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=2000")' }}
             >
-              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors" />
+              <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-colors" />
             </div>
 
             {/* AI HUD Overlay */}
             <div className="absolute inset-0 flex items-center justify-center">
                 <div className="relative w-full h-full p-8 md:p-12">
                    {/* Face Mesh / Points Overlay (Simulated) */}
-                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-80 border-2 border-red-500/20 rounded-[3rem] hidden md:block">
-                      <div className="absolute top-1/4 left-1/4 w-4 h-4 border-t-2 border-l-2 border-red-500" />
-                      <div className="absolute top-1/4 right-1/4 w-4 h-4 border-t-2 border-r-2 border-red-500" />
-                      <div className="absolute bottom-1/3 left-1/2 -translate-x-1/2 w-8 h-1 bg-red-500/50 rounded-full" />
-                      <div className="absolute inset-0 flex items-center justify-center">
-                         <div className="w-full h-[1px] bg-red-500/10 animate-scan shadow-[0_0_15px_rgba(239,68,68,0.5)]" />
+                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[45%] w-72 h-96 border-2 border-red-500/30 rounded-[4rem] hidden md:block">
+                      {/* Tracking Points */}
+                      <div className="absolute top-1/4 left-[20%] w-2 h-2 bg-red-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(239,68,68,0.8)]" />
+                      <div className="absolute top-1/4 right-[20%] w-2 h-2 bg-red-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(239,68,68,0.8)]" />
+                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-2 h-2 bg-red-500/50 rounded-full" />
+                      
+                      {/* Scanning Box Corners */}
+                      <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-red-500" />
+                      <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-red-500" />
+                      <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-red-500" />
+                      <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-red-500" />
+
+                      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                         <div className="w-full h-[2px] bg-red-500/20 animate-scan shadow-[0_0_20px_rgba(239,68,68,0.3)]" />
                       </div>
                    </div>
 
