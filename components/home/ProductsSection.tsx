@@ -17,7 +17,7 @@ export default function ProductsSection() {
           subheading="We build high-performance tools that solve critical challenges in the Indian market."
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {PRODUCTS.map((product) => (
             <Card key={product.id} className="group border-none bg-gradient-to-br from-card to-muted/20 shadow-xl overflow-hidden">
               <CardHeader className="p-8 md:p-12 pb-6">

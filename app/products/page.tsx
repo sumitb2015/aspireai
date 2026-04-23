@@ -3,13 +3,13 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
-import { ArrowRight, ExternalLink, Cpu, BarChart3, Users, Zap, Search, ShieldCheck } from "lucide-react";
+import { ArrowRight, ExternalLink, Cpu, BarChart3, Users, Zap, Search, ShieldCheck, AlertTriangle, Activity } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Products",
-  description: "Explore AspireAI's market-ready AI solutions including OI Alpha and BespokeCV.",
+  description: "Explore AspireAI's market-ready AI solutions including OI Alpha, BespokeCV, and VigilDrive.",
 };
 
 export default function ProductsPage() {
@@ -86,7 +86,7 @@ export default function ProductsPage() {
                             <p className="text-sm text-muted-foreground">Fine-tuned LLMs that translate complex Greeks into actionable market sentiment summaries.</p>
                           </div>
                         </>
-                      ) : (
+                      ) : product.id === "bespokecv" ? (
                         <>
                           <div className="p-6 rounded-xl bg-background/50 border border-white/10">
                             <Search className="text-primary mb-4" size={32} />
@@ -97,6 +97,19 @@ export default function ProductsPage() {
                             <ShieldCheck className="text-emerald-500 mb-4" size={32} />
                             <h4 className="font-bold mb-2">Market-Specific Templates</h4>
                             <p className="text-sm text-muted-foreground">Curated designs optimized for top Indian conglomerates including Tata, Reliance, and Fintech unicorns.</p>
+                          </div>
+                        </>
+                      ) : (
+                        <>
+                          <div className="p-6 rounded-xl bg-background/50 border border-white/10">
+                            <Activity className="text-red-500 mb-4" size={32} />
+                            <h4 className="font-bold mb-2">Real-time Vision Pipeline</h4>
+                            <p className="text-sm text-muted-foreground">Edge-optimized computer vision models detecting fatigue with 99.2% accuracy in low-light conditions.</p>
+                          </div>
+                          <div className="p-6 rounded-xl bg-background/50 border border-white/10">
+                            <AlertTriangle className="text-yellow-500 mb-4" size={32} />
+                            <h4 className="font-bold mb-2">Predictive Safety Alerts</h4>
+                            <p className="text-sm text-muted-foreground">Heuristic-based AI that identifies micro-sleep patterns before they become critical safety incidents.</p>
                           </div>
                         </>
                       )}
