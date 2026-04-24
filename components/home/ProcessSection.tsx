@@ -7,7 +7,7 @@ import { Search, Code2, Rocket } from "lucide-react";
 const STEPS = [
   {
     title: "Discovery & Strategy",
-    desc: "We analyze your existing workflows to identify high-impact AI use cases specific to the Indian market.",
+    desc: "We analyze your existing workflows to identify high-impact AI use cases specific to your global operational needs.",
     icon: Search,
     color: "bg-blue-500/10 text-blue-500",
   },

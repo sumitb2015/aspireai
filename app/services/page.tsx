@@ -7,8 +7,8 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Services",
-  description: "Explore our range of specialized AI services including Conversational AI, Generative AI, Computer Vision, and Intelligent Agents.",
+  title: "AI Services & Solutions",
+  description: "Comprehensive AI services for global enterprises, including Generative AI, Conversational AI, Computer Vision, and Autonomous Agents.",
 };
 
 export default function ServicesPage() {

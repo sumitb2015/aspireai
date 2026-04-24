@@ -6,13 +6,13 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: "Learn about AspireAI Solutions and our mission to build practical AI products for Indian markets.",
+  description: "Learn about AspireAI Solutions and our mission to build practical AI products and enterprise-grade services for a global audience.",
 };
 
 const VALUES = [
   { title: "Innovation", icon: Zap, desc: "We push the boundaries of what's possible with AI." },
   { title: "Practicality", icon: Target, desc: "We focus on real-world utility, not just research demos." },
-  { title: "India-First", icon: Globe, desc: "Our products are localized for the unique needs of Indian users." },
+  { title: "Global Reach", icon: Globe, desc: "Our products are designed for global scalability and impact." },
   { title: "Transparency", icon: Shield, desc: "We build ethical AI systems that are clear and explainable." },
 ];
 
@@ -29,7 +29,7 @@ export default function AboutPage() {
         <SectionHeading 
           eyebrow="Our Story"
           heading="Where AI Meets Possibilities"
-          subheading="Founded in 2024, AspireAI Solutions was born from a simple mission: to make advanced AI accessible and practical for Indian businesses."
+          subheading="Founded in 2024, AspireAI Solutions was born from a simple mission: to make advanced AI accessible and practical for businesses worldwide."
           align="left"
           className="mb-20"
         />
@@ -40,7 +40,7 @@ export default function AboutPage() {
               Based in the technology hub of Pune, we are a team of engineers, data scientists, and product thinkers dedicated to building the next generation of AI-native applications.
             </p>
             <p>
-              We believe that the true power of Artificial Intelligence lies in its ability to solve specific, local problems. Whether it's navigating the complexities of the Indian stock market or helping job seekers stand out in a competitive landscape, our products are designed with the end-user in mind.
+              We believe that the true power of Artificial Intelligence lies in its ability to solve complex, global challenges. Whether it's navigating the intricacies of financial markets or helping job seekers stand out in a competitive global landscape, our products are designed with the end-user in mind.
             </p>
             <div className="pt-8">
                <Card className="bg-accent-primary/5 border-accent-primary/20 p-8">

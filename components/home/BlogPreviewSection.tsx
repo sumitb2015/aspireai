@@ -18,7 +18,7 @@ export default function BlogPreviewSection() {
           <SectionHeading 
             eyebrow="Thought Leadership"
             heading="Latest from AspireAI Insights"
-            subheading="Expert opinions on the evolution of AI in the Indian corporate landscape."
+            subheading="Expert opinions on the evolution of AI in the modern corporate landscape."
             align="left"
             className="mb-0 max-w-2xl"
           />

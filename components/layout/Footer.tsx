@@ -15,18 +15,24 @@ export default function Footer() {
             <span className="text-2xl font-syne font-extrabold text-accent-primary">AI</span>
           </Link>
           <p className="text-text-secondary text-sm leading-relaxed max-w-xs">
-            {SITE_CONFIG.tagline}. Building advanced AI solutions for the Indian market from the heart of Pune.
+            {SITE_CONFIG.tagline}. Delivering advanced AI solutions to businesses worldwide.
           </p>
           <div className="flex items-center gap-4">
-            <a href={SITE_CONFIG.socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent-primary transition-colors">
-              <Linkedin size={20} />
-            </a>
-            <a href={SITE_CONFIG.socials.twitter} target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent-primary transition-colors">
-              <Twitter size={20} />
-            </a>
-            <a href={SITE_CONFIG.socials.github} target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent-primary transition-colors">
-              <Github size={20} />
-            </a>
+            {SITE_CONFIG.socials.linkedin !== "#" && (
+              <a href={SITE_CONFIG.socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent-primary transition-colors">
+                <Linkedin size={20} />
+              </a>
+            )}
+            {SITE_CONFIG.socials.twitter !== "#" && (
+              <a href={SITE_CONFIG.socials.twitter} target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent-primary transition-colors">
+                <Twitter size={20} />
+              </a>
+            )}
+            {SITE_CONFIG.socials.github !== "#" && (
+              <a href={SITE_CONFIG.socials.github} target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent-primary transition-colors">
+                <Github size={20} />
+              </a>
+            )}
           </div>
         </div>
 

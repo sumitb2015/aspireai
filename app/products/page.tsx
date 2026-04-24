@@ -8,8 +8,8 @@ import { Badge } from "@/components/ui/Badge";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Products",
-  description: "Explore AspireAI's market-ready AI solutions including OI Alpha, BespokeCV, and VigilDrive.",
+  title: "Innovative AI Products",
+  description: "Explore AspireAI's suite of AI-powered products designed for global impact, including OI Alpha, BespokeCV, and VigilDrive.",
 };
 
 export default function ProductsPage() {
@@ -19,7 +19,7 @@ export default function ProductsPage() {
         <SectionHeading 
           eyebrow="Market-Ready Solutions"
           heading="AI Products Built for Impact"
-          subheading="We bridge the gap between complex AI models and practical, daily utility for the Indian market."
+          subheading="We bridge the gap between complex AI models and practical, daily utility for the global market."
           align="left"
           className="mb-20"
         />
@@ -77,13 +77,13 @@ export default function ProductsPage() {
                         <>
                           <div className="p-6 rounded-xl bg-background/50 border border-white/10">
                             <BarChart3 className="text-orange-500 mb-4" size={32} />
-                            <h4 className="font-bold mb-2">NSE Real-time Engine</h4>
-                            <p className="text-sm text-muted-foreground">Proprietary data pipeline processing 10k+ option strikes per second with sub-millisecond latency.</p>
+                            <h4 className="font-bold mb-2">Real-time Analytics Engine</h4>
+                            <p className="text-sm text-muted-foreground">Proprietary data pipeline processing high-volume derivatives data with sub-millisecond latency.</p>
                           </div>
                           <div className="p-6 rounded-xl bg-background/50 border border-white/10">
                             <Cpu className="text-primary mb-4" size={32} />
                             <h4 className="font-bold mb-2">Predictive AI Narratives</h4>
-                            <p className="text-sm text-muted-foreground">Fine-tuned LLMs that translate complex Greeks into actionable market sentiment summaries.</p>
+                            <p className="text-sm text-muted-foreground">Fine-tuned LLMs that translate complex market data into actionable sentiment summaries.</p>
                           </div>
                         </>
                       ) : product.id === "bespokecv" ? (
@@ -91,12 +91,12 @@ export default function ProductsPage() {
                           <div className="p-6 rounded-xl bg-background/50 border border-white/10">
                             <Search className="text-primary mb-4" size={32} />
                             <h4 className="font-bold mb-2">ATS Semantic Mapping</h4>
-                            <p className="text-sm text-muted-foreground">Advanced NLP matching that aligns candidate skills with specific Indian IT sector requirements.</p>
+                            <p className="text-sm text-muted-foreground">Advanced NLP matching that aligns candidate skills with specific industry requirements across global tech sectors.</p>
                           </div>
                           <div className="p-6 rounded-xl bg-background/50 border border-white/10">
                             <ShieldCheck className="text-emerald-500 mb-4" size={32} />
-                            <h4 className="font-bold mb-2">Market-Specific Templates</h4>
-                            <p className="text-sm text-muted-foreground">Curated designs optimized for top Indian conglomerates including Tata, Reliance, and Fintech unicorns.</p>
+                            <h4 className="font-bold mb-2">Universal Templates</h4>
+                            <p className="text-sm text-muted-foreground">Curated designs optimized for top global corporations and high-growth startups.</p>
                           </div>
                         </>
                       ) : (
@@ -104,12 +104,12 @@ export default function ProductsPage() {
                           <div className="p-6 rounded-xl bg-background/50 border border-white/10">
                             <Activity className="text-red-500 mb-4" size={32} />
                             <h4 className="font-bold mb-2">Real-time Vision Pipeline</h4>
-                            <p className="text-sm text-muted-foreground">Edge-optimized computer vision models detecting fatigue with 99.2% accuracy in low-light conditions.</p>
+                            <p className="text-sm text-muted-foreground">Edge-optimized computer vision models detecting anomalies with 99.2% accuracy in diverse environments.</p>
                           </div>
                           <div className="p-6 rounded-xl bg-background/50 border border-white/10">
                             <AlertTriangle className="text-yellow-500 mb-4" size={32} />
                             <h4 className="font-bold mb-2">Predictive Safety Alerts</h4>
-                            <p className="text-sm text-muted-foreground">Heuristic-based AI that identifies micro-sleep patterns before they become critical safety incidents.</p>
+                            <p className="text-sm text-muted-foreground">Heuristic-based AI that identifies risk patterns before they become critical safety incidents.</p>
                           </div>
                         </>
                       )}
@@ -142,8 +142,8 @@ export default function ProductsPage() {
             </Card>
             <Card className="text-center p-8 bg-muted/30 border-none shadow-none">
               <ShieldCheck className="mx-auto text-primary mb-6" size={40} />
-              <h3 className="text-xl font-bold mb-3">Data Sovereignty</h3>
-              <p className="text-muted-foreground text-sm">Enterprise-grade security ensuring all user data stays within Indian regulatory boundaries.</p>
+              <h3 className="text-xl font-bold mb-3">Data Security</h3>
+              <p className="text-muted-foreground text-sm">Enterprise-grade security and compliance ensuring data protection and privacy.</p>
             </Card>
           </div>
         </div>

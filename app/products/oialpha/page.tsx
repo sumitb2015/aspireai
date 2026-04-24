@@ -7,15 +7,15 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "OI Alpha",
-  description: "Professional-grade options analytics for NSE/NIFTY derivatives traders.",
+  description: "Professional-grade options analytics for professional derivatives traders.",
 };
 
 const FEATURES = [
-  { title: "OI Tracking", description: "Real-time Open Interest tracking for all NSE derivatives.", icon: BarChart3 },
+  { title: "OI Tracking", description: "Real-time Open Interest tracking for derivatives markets.", icon: BarChart3 },
   { title: "IV Surface", description: "Visualize Implied Volatility across different strikes and expiries.", icon: TrendingUp },
   { title: "Strategy Payoff", description: "Simulate complex option strategies with visual payoff graphs.", icon: Layout },
   { title: "AI Narratives", description: "Natural language summaries of market trends using LLMs.", icon: Cpu },
-  { title: "NSE Data", description: "High-frequency data directly from exchange feeds.", icon: Database },
+  { title: "Exchange Data", description: "High-frequency data directly from exchange feeds.", icon: Database },
   { title: "Dark Terminal UI", description: "Designed for focused, long-duration trading sessions.", icon: ShieldCheck },
 ];
 
@@ -30,10 +30,10 @@ export default function OIAlphaPage() {
             Live Product
           </span>
           <h1 className="text-fluid-h1 font-syne font-extrabold mb-6">
-            Professional Options <br /> Analytics for <span className="text-accent-secondary">Indian Traders</span>
+            Professional Options <br /> Analytics for <span className="text-accent-secondary">Modern Traders</span>
           </h1>
           <p className="text-text-secondary text-xl max-w-3xl leading-relaxed">
-            OI Alpha provides professional-grade tools to retail traders, enabling them to make data-driven decisions in the complex Indian derivatives market.
+            OI Alpha provides professional-grade tools to retail and institutional traders, enabling them to make data-driven decisions in complex derivatives markets.
           </p>
           <div className="mt-10">
             <a href={product.url} target="_blank" rel="noopener noreferrer">
@@ -69,7 +69,7 @@ export default function OIAlphaPage() {
 
         <SectionHeading 
           heading="Engineered for Performance"
-          subheading="Every feature is built with the Indian options trader in mind."
+          subheading="Every feature is built with the modern quantitative trader in mind."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-32">

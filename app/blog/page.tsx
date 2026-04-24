@@ -7,8 +7,8 @@ import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog",
-  description: "Insights into AI strategy, product development, and the Indian technology market.",
+  title: "AI Insights & Engineering Blog",
+  description: "Explore the latest insights, engineering deep-dives, and trends in Artificial Intelligence, LLMs, and Computer Vision.",
 };
 
 export default function BlogPage() {
@@ -18,7 +18,7 @@ export default function BlogPage() {
         <SectionHeading 
           eyebrow="Insights"
           heading="The AspireAI Blog"
-          subheading="Sharing our journey, technical deep-dives, and thoughts on the future of AI in India."
+          subheading="Sharing our journey, technical deep-dives, and thoughts on the future of AI."
           align="left"
           className="mb-20"
         />

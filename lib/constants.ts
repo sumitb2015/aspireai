@@ -12,15 +12,15 @@ import {
 
 export const SITE_CONFIG = {
   name: "AspireAI Solutions",
-  tagline: "Where AI Meets Possibilities",
+  tagline: "Innovative AI Products & Services",
   url: "https://aspireaisolutions.com",
   email: "contact@aspireaisolutions.com",
   location: "Pune, India",
   founded: "2024",
   socials: {
-    linkedin: "https://linkedin.com/company/aspireai-solutions",
-    twitter: "https://twitter.com/aspireai",
-    github: "https://github.com/aspireai",
+    linkedin: "#",
+    twitter: "#",
+    github: "#",
   }
 };
 
@@ -38,7 +38,7 @@ export const PRODUCTS = [
     id: "oialpha",
     name: "OI Alpha",
     tagline: "Professional Options Analytics",
-    description: "Professional-grade options analytics for NSE/NIFTY derivatives traders. Real-time OI tracking, Greeks, IV surface, and AI-powered market insights.",
+    description: "Professional-grade options analytics for professional derivatives traders. Real-time OI tracking, Greeks, IV surface, and AI-powered market insights.",
     url: "https://oialpha.com",
     category: "Fintech · Options Trading",
     features: ["Open Interest Tracking", "IV Surface", "Strategy Builder", "AI Narratives"],
@@ -50,10 +50,10 @@ export const PRODUCTS = [
     id: "bespokecv",
     name: "BespokeCV",
     tagline: "AI-Powered Resume Builder",
-    description: "AI-powered resume builder for Indian job seekers. ATS-friendly templates, one-click generation, and smart content suggestions tailored for the Indian job market.",
+    description: "AI-powered resume builder for global job seekers. ATS-friendly templates, one-click generation, and smart content suggestions tailored for modern hiring platforms.",
     url: "https://bespokecv.in",
     category: "Career Tech · HR",
-    features: ["ATS Optimized", "AI Content", "45+ Templates", "Indian Market"],
+    features: ["ATS Optimized", "AI Content", "45+ Templates", "Global Compatibility"],
     accentColor: "#00D4FF",
     status: "live",
     badge: "Live · AI Resume Builder",
@@ -147,23 +147,23 @@ export const STATS = [
   { label: "Live Products", value: 3, suffix: "+" },
   { label: "AI Technologies", value: 5, suffix: "+" },
   { label: "Users Served", value: 500, suffix: "+" },
-  { label: "Focus Market", value: "India", isText: true },
+  { label: "Global Reach", value: "Worldwide", isText: true },
 ];
 
 export const TRUST_CARDS = [
   {
-    title: "India-First",
-    description: "Built for Indian markets, regulations, and users.",
+    title: "Enterprise-Ready",
+    description: "Built for global scale, security, and performance.",
     icon: Globe,
   },
   {
-    title: "Production-Ready",
-    description: "Not demos, real products with real users.",
+    title: "Production-Grade",
+    description: "Battle-tested products with real-world users.",
     icon: Rocket,
   },
   {
-    title: "Full-Stack AI",
-    description: "From model fine-tuning to deployed web products.",
+    title: "End-to-End AI",
+    description: "From strategy to model fine-tuning and deployment.",
     icon: Shield,
   }
 ];

@@ -2,20 +2,20 @@ import { PRODUCTS } from "@/lib/constants";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
-import { CheckCircle2, FileText, Sparkles, Zap, Shield, Search, IndianRupee } from "lucide-react";
+import { CheckCircle2, FileText, Sparkles, Zap, Shield, Search, CreditCard } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "BespokeCV",
-  description: "AI-powered resume builder for Indian job seekers.",
+  description: "AI-powered resume builder for global job seekers.",
 };
 
 const FEATURES = [
-  { title: "45+ ATS Templates", description: "Industry-standard templates that pass through ATS filters.", icon: FileText },
+  { title: "45+ ATS Templates", description: "Industry-standard templates that pass through global ATS filters.", icon: FileText },
   { title: "AI Content Generation", description: "Tailor your experience section with AI-optimized bullet points.", icon: Sparkles },
-  { title: "Razorpay Payments", description: "Localized, secure payment processing for Indian users.", icon: IndianRupee },
+  { title: "Secure Payments", description: "Secure, global payment processing for seamless access.", icon: CreditCard },
   { title: "PDF Export", description: "One-click high-quality PDF downloads.", icon: Zap },
-  { title: "Job Role Optimization", description: "Optimize your CV for specific job descriptions.", icon: Search },
+  { title: "Job Role Optimization", description: "Optimize your CV for specific global job descriptions.", icon: Search },
   { title: "Privacy First", description: "Your data is encrypted and never sold to third parties.", icon: Shield },
 ];
 
@@ -30,7 +30,7 @@ export default function BespokeCVPage() {
             Live Product
           </span>
           <h1 className="text-fluid-h1 font-syne font-extrabold mb-6">
-            AI-Powered Resumes for <br /> <span className="text-accent-primary">Indian Job Seekers</span>
+            AI-Powered Resumes for <br /> <span className="text-accent-primary">Global Job Seekers</span>
           </h1>
           <p className="text-text-secondary text-xl max-w-3xl leading-relaxed">
             Stop worrying about ATS filters. BespokeCV uses advanced AI to help you build professional, high-impact resumes in minutes.
@@ -60,7 +60,7 @@ export default function BespokeCVPage() {
 
         <SectionHeading 
           heading="Built for the Modern Job Market"
-          subheading="Everything you need to stand out in the competitive Indian IT and corporate landscape."
+          subheading="Everything you need to stand out in the competitive global tech and corporate landscape."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-32">

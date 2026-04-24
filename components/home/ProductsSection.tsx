@@ -14,7 +14,7 @@ export default function ProductsSection() {
         <SectionHeading 
           eyebrow="Proprietary Tech"
           heading="Market-Ready AI Products"
-          subheading="We build high-performance tools that solve critical challenges in the Indian market."
+          subheading="We build high-performance tools that solve critical challenges in the global market."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

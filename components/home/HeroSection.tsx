@@ -20,7 +20,7 @@ export default function HeroSection() {
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary border border-primary/20 text-xs font-bold uppercase tracking-widest mb-8"
           >
-            <Sparkles size={14} /> Built for the Indian AI Frontier
+            <Sparkles size={14} /> Leading the Global AI Frontier
           </motion.div>
 
           <motion.h1
@@ -38,7 +38,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-muted-foreground text-lg md:text-xl max-w-2xl mb-12 leading-relaxed"
           >
-            AspireAI Solutions delivers production-ready AI products for Indian markets. From fintech analytics to career optimization, we bridge the gap between LLM potential and real-world value.
+            AspireAI Solutions delivers production-ready AI products for global markets. From fintech analytics to career optimization, we bridge the gap between AI potential and real-world value.
           </motion.p>
 
           <motion.div
@@ -68,13 +68,13 @@ export default function HeroSection() {
             {[
               {
                 title: "OI Alpha",
-                desc: "Institutional-grade options analytics for the Indian derivatives market.",
+                desc: "Institutional-grade options analytics for professional derivatives markets.",
                 icon: <div className="w-10 h-10 rounded-lg bg-orange-500/10 text-orange-500 flex items-center justify-center font-bold text-xs">OI</div>,
                 tag: "Live Now"
               },
               {
                 title: "BespokeCV",
-                desc: "AI-powered resume optimization built specifically for Indian tech talent.",
+                desc: "AI-powered resume optimization built for global tech talent.",
                 icon: <div className="w-10 h-10 rounded-lg bg-blue-500/10 text-blue-500 flex items-center justify-center font-bold text-xs">CV</div>,
                 tag: "Popular"
               },
