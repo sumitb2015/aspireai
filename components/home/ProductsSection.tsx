@@ -5,6 +5,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
+import Link from "next/link";
 import { ExternalLink, CheckCircle2 } from "lucide-react";
 
 export default function ProductsSection() {
