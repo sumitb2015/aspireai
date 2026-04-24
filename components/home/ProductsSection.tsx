@@ -55,9 +55,11 @@ export default function ProductsSection() {
                       Launch {product.name} <ExternalLink size={16} className="ml-2" />
                     </Button>
                   </a>
-                  <Button variant="outline" size="lg" className="flex-grow md:flex-grow-0 rounded-full px-8">
-                    View Case Study
-                  </Button>
+                  <Link href="/contact" className="flex-grow md:flex-grow-0">
+                    <Button variant="outline" size="lg" className="w-full md:w-auto rounded-full px-8">
+                      View Case Study
+                    </Button>
+                  </Link>
                 </div>
               </CardFooter>
               

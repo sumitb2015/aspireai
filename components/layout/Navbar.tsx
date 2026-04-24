@@ -48,7 +48,9 @@ export default function Navbar() {
           ))}
           <div className="ml-4 pl-4 border-l flex items-center gap-4">
             <ThemeToggle />
-            <Button size="sm" className="rounded-full">Schedule Demo</Button>
+            <Link href="/contact">
+              <Button size="sm" className="rounded-full">Schedule Demo</Button>
+            </Link>
           </div>
         </nav>
 
@@ -86,7 +88,9 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <Button className="w-full mt-4 rounded-xl py-6 text-lg">Schedule Demo</Button>
+            <Link href="/contact" onClick={() => setIsOpen(false)}>
+              <Button className="w-full mt-4 rounded-xl py-6 text-lg">Schedule Demo</Button>
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>
