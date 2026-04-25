@@ -29,7 +29,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-fluid-h1 font-syne font-extrabold mb-8 tracking-tight max-w-5xl"
           >
-            Enterprise AI Solutions <span className="text-primary italic">Company in India.</span>
+            Production-Ready AI Products <span className="text-primary italic">for Global Markets.</span>
           </motion.h1>
 
           <motion.p
