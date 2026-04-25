@@ -170,33 +170,6 @@ const TESTIMONIAL = {
   rating: 5
 };
 
-const HOW_IT_WORKS = [
-  {
-    step: "01",
-    title: "Simple Install",
-    description: "Plug-and-play hardware setup. Mounts in minutes to any vehicle cabin with automotive-grade stability.",
-    icon: Wrench
-  },
-  {
-    step: "02",
-    title: "AI Detection",
-    description: "Advanced neural engine monitors driver state in real-time, detecting even subtle micro-sleep and distraction events.",
-    icon: Eye
-  },
-  {
-    step: "03",
-    title: "Alert & Report",
-    description: "Immediate in-cabin audible alerts prevent accidents, while events are logged to the fleet dashboard for review.",
-    icon: BellRing
-  }
-];
-
-const TESTIMONIAL = {
-  quote: "Since deploying VigilDrive in our long-haul fleet, we've seen a dramatic reduction in critical fatigue events. The real-time alerts are a game-changer for our drivers' safety and our operational peace of mind.",
-  author: "Operations Head, National Logistics Partner",
-  rating: 5
-};
-
 const PRICING = [
   {
     name: "Professional",
