@@ -550,7 +550,7 @@ export default function VigilDrivePage() {
         <div className="mb-32">
           <SectionHeading 
             heading="Voice of our Users"
-            subheading="Join thousands of drivers and parents who rely on VigilDrive every day for their road safety."
+            subheading="Join hundreds of drivers and parents who rely on VigilDrive every day for their road safety."
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {TESTIMONIALS.map((t, i) => (
