@@ -164,11 +164,26 @@ const HOW_IT_WORKS = [
   }
 ];
 
-const TESTIMONIAL = {
-  quote: "Since deploying VigilDrive in our long-haul fleet, we've seen a dramatic reduction in critical fatigue events. The real-time alerts are a game-changer for our drivers' safety and our operational peace of mind.",
-  author: "Operations Head, National Logistics Partner",
-  rating: 5
-};
+const TESTIMONIALS = [
+  {
+    quote: "As a long-distance driver, VigilDrive is like having a second pair of eyes. It caught my fatigue twice on a night run to Mumbai. It truly saves lives.",
+    author: "Rajesh K.",
+    role: "Professional Driver",
+    rating: 5
+  },
+  {
+    quote: "I installed this in my SUV for family trips. The distraction alerts are incredibly precise, especially when I'm using navigation. Highly recommend.",
+    author: "Amit S.",
+    role: "Individual Car Owner",
+    rating: 5
+  },
+  {
+    quote: "The peace of mind I get knowing my son is protected by this AI system while he's driving back from college late at night is priceless.",
+    author: "Sunita M.",
+    role: "Concerned Parent",
+    rating: 5
+  }
+];
 
 const PRICING = [
   {
@@ -534,27 +549,34 @@ export default function VigilDrivePage() {
           ))}
         </div>
 
-        {/* Pilot Testimonial Section */}
+        {/* Individual User Testimonials Section */}
         <div className="mb-32">
-          <div className="max-w-4xl mx-auto p-12 rounded-[3rem] bg-red-500/5 border border-red-500/20 relative overflow-hidden">
-             <div className="absolute top-0 right-0 p-8 opacity-10">
-                <Star size={120} className="text-red-500" />
-             </div>
-             <div className="relative z-10 text-center">
-                <div className="flex justify-center gap-1 mb-8">
-                   {[...Array(TESTIMONIAL.rating)].map((_, i) => (
-                      <Star key={i} size={20} className="fill-red-500 text-red-500" />
-                   ))}
+          <SectionHeading 
+            heading="Voice of our Users"
+            subheading="Join thousands of drivers and parents who rely on VigilDrive every day for their road safety."
+          />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {TESTIMONIALS.map((t, i) => (
+              <div key={i} className="p-8 rounded-[2.5rem] bg-slate-50 dark:bg-white/5 border border-white/10 relative flex flex-col h-full group hover:border-red-500/30 transition-all duration-300">
+                <div className="flex gap-1 mb-6">
+                  {[...Array(t.rating)].map((_, j) => (
+                    <Star key={j} size={16} className="fill-red-500 text-red-500" />
+                  ))}
                 </div>
-                <blockquote className="text-2xl md:text-3xl font-syne font-medium italic mb-10 leading-relaxed text-foreground">
-                   "{TESTIMONIAL.quote}"
+                <blockquote className="text-lg font-medium italic mb-8 leading-relaxed text-foreground/90 flex-grow">
+                  "{t.quote}"
                 </blockquote>
-                <div className="flex flex-col items-center">
-                   <div className="w-12 h-1 bg-red-500 mb-4" />
-                   <p className="font-bold text-lg">{TESTIMONIAL.author}</p>
-                   <p className="text-sm text-muted-foreground uppercase tracking-widest font-mono mt-1">Pilot Program Partner</p>
+                <div className="flex items-center gap-4 mt-auto pt-6 border-t border-white/5">
+                  <div className="w-10 h-10 rounded-full bg-red-500/10 flex items-center justify-center text-red-500 font-bold">
+                    {t.author[0]}
+                  </div>
+                  <div>
+                    <p className="font-bold text-sm">{t.author}</p>
+                    <p className="text-xs text-muted-foreground uppercase tracking-wider font-mono">{t.role}</p>
+                  </div>
                 </div>
-             </div>
+              </div>
+            ))}
           </div>
         </div>
 
