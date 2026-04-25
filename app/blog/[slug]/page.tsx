@@ -60,7 +60,7 @@ export default function BlogPostPage({ params }: BlogPostProps) {
           {/* Sidebar - Sticky Metadata & Share */}
           <aside className="lg:w-1/4 order-2 lg:order-1">
             <div className="sticky top-40">
-              <Link href="/blog" className="inline-flex items-center gap-2 text-text-secondary hover:text-accent-primary transition-colors group text-sm font-bold uppercase tracking-widest mt-6 mb-4">
+              <Link href="/blog" className="inline-flex items-center gap-2 text-text-secondary hover:text-accent-primary transition-colors group text-sm font-bold uppercase tracking-widest mt-7 mb-5 block">
                 <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> Back to Blog
               </Link>
             </div>
@@ -70,8 +70,6 @@ export default function BlogPostPage({ params }: BlogPostProps) {
           <main className="lg:w-3/4 order-1 lg:order-2">
             <article>
               <div className="mb-12">
-                <Badge variant="primary" className="mb-6 px-5 py-1.5 text-[10px] tracking-[0.2em] uppercase">{post.category}</Badge>
-                
                 <div className="relative w-full aspect-[21/10] rounded-[2rem] overflow-hidden mb-12 shadow-2xl shadow-accent-primary/5 group">
                   <img 
                     src={post.coverImage} 
@@ -84,21 +82,22 @@ export default function BlogPostPage({ params }: BlogPostProps) {
                   {post.title}
                 </h1>
 
-                <div className="flex items-center gap-6 flex-wrap text-sm text-text-secondary mt-4 mb-8">
-                  <span className="flex items-center gap-2">
+                <div className="flex items-center gap-5 flex-wrap text-sm text-text-secondary mt-3 mb-10">
+                  <span className="inline-flex items-center gap-2">
                     <Calendar size={16} className="text-accent-primary/50" />
                     {post.date}
                   </span>
-                  <span className="flex items-center gap-2">
+                  <span aria-hidden="true" className="text-text-secondary opacity-50">·</span>
+                  <span className="inline-flex items-center gap-2">
                     <Clock size={16} className="text-accent-primary/50" />
                     {post.readTime}
                   </span>
-                  <Badge variant="secondary" className="px-3 py-1 text-[10px] tracking-wider uppercase font-bold bg-surface border-border/30">
+                  <Badge variant="secondary" className="px-3 py-1 text-[11px] tracking-wider uppercase font-bold bg-gray-100 text-gray-700 border-none rounded-full">
                     {post.category}
                   </Badge>
-                  <span className="flex items-center gap-2 cursor-pointer hover:text-accent-primary transition-colors">
-                    Share <ArrowRight size={14} />
-                  </span>
+                  <button className="inline-flex items-center gap-1.5 text-[13px] text-text-secondary bg-transparent border border-border/50 rounded-md px-2.5 py-1 cursor-pointer hover:text-accent-primary hover:border-accent-primary transition-colors">
+                    ↗ Share
+                  </button>
                 </div>
               </div>
               <div className="max-w-4xl">
