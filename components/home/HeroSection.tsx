@@ -29,16 +29,16 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-fluid-h1 font-syne font-extrabold mb-8 tracking-tight max-w-5xl"
           >
-            Where Intelligence Meets <span className="text-primary italic">Possibility.</span>
+            Enterprise AI Solutions <span className="text-primary italic">Company in India.</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-muted-foreground text-lg md:text-xl max-w-2xl mb-12 leading-relaxed"
+            className="text-muted-foreground text-lg md:text-xl max-w-3xl mb-12 leading-relaxed"
           >
-            AspireAI Solutions delivers production-ready AI products for global markets. From fintech analytics to career optimization, we bridge the gap between AI potential and real-world value.
+            Based in Pune, AspireAI engineers production-ready Generative AI, Computer Vision, and autonomous agent workflows. We help Indian fintechs, insurtechs, and enterprises scale securely.
           </motion.p>
 
           <motion.div
@@ -49,12 +49,12 @@ export default function HeroSection() {
           >
             <Link href="/products">
               <Button size="lg" className="rounded-full">
-                Explore Products <ArrowRight size={18} className="ml-2" />
+                View Our AI Products <ArrowRight size={18} className="ml-2" />
               </Button>
             </Link>
             <Link href="/contact">
               <Button variant="outline" size="lg" className="rounded-full">
-                Schedule a Demo
+                Schedule an AI Consultation
               </Button>
             </Link>
           </motion.div>

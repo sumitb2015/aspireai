@@ -13,8 +13,8 @@ interface ServiceDetailProps {
 export async function generateMetadata({ params }: ServiceDetailProps): Promise<Metadata> {
   const service = SERVICES.find((s) => s.slug === params.slug);
   return {
-    title: service?.title || "Service",
-    description: service?.description,
+    title: service?.seoTitle || service?.title || "Service",
+    description: service?.seoDescription || service?.description,
   };
 }
 
@@ -45,9 +45,22 @@ export default function ServiceDetailPage({ params }: ServiceDetailProps) {
             </div>
             <h1 className="text-4xl md:text-6xl font-syne font-extrabold">{service.title}</h1>
           </div>
-          <p className="text-2xl text-text-secondary leading-relaxed font-syne">
+          <p className="text-2xl text-text-secondary leading-relaxed font-syne mb-12">
             {service.details.tagline}
           </p>
+
+          <div className="flex flex-col gap-12 mt-16 max-w-3xl">
+            {service.content?.map((section) => (
+              <div key={section.heading} className="space-y-4">
+                <h2 className="text-2xl md:text-3xl font-syne font-bold text-text-primary">
+                  {section.heading}
+                </h2>
+                <p className="text-lg text-text-secondary leading-relaxed">
+                  {section.text}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-20">

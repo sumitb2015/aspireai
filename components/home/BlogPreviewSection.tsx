@@ -42,11 +42,11 @@ export default function BlogPreviewSection() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="flex-grow">
-                  <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
+                  <p className="text-foreground/80 text-sm leading-relaxed line-clamp-3">
                     {post.excerpt}
                   </p>
                 </CardContent>
-                <CardFooter className="pt-6 border-t border-border/50 flex items-center justify-between text-xs text-muted-foreground font-medium">
+                <CardFooter className="pt-6 border-t border-border/50 flex items-center justify-between text-xs text-foreground/60 font-medium">
                   <div className="flex items-center gap-3">
                     <span className="flex items-center gap-1">
                       <Calendar size={12} /> {post.date}
