@@ -6,8 +6,42 @@ import { CheckCircle2, BarChart3, TrendingUp, Cpu, Database, Layout, ShieldCheck
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "OI Alpha",
-  description: "Professional-grade options analytics for professional derivatives traders.",
+  title: "OI Alpha | Professional Options Analytics & OI Tracking Tool",
+  description: "Advanced options analytics for derivatives traders. Real-time Open Interest (OI) tracking, Greeks, IV surface, and AI-powered market insights for Indian markets.",
+  keywords: [
+    "Options Analytics Tool",
+    "Open Interest Tracking",
+    "OI Data Analysis India",
+    "Nifty Options Greeks",
+    "Bank Nifty OI Analysis",
+    "Implied Volatility Surface",
+    "Derivatives Trading Software",
+    "OI Alpha",
+    "AspireAI Fintech",
+    "Real-time OI dashboard"
+  ],
+  openGraph: {
+    title: "OI Alpha | Professional Options Analytics",
+    description: "Professional-grade options analytics for derivatives traders. Real-time OI tracking, Greeks, and AI-powered market insights.",
+    url: "https://oialpha.com",
+    siteName: "AspireAI Solutions",
+    images: [
+      {
+        url: "/og-oialpha.png",
+        width: 1200,
+        height: 630,
+        alt: "OI Alpha Options Analytics",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "OI Alpha | Professional Options Analytics",
+    description: "Master the options market with real-time OI tracking and advanced derivatives analytics.",
+    images: ["/og-oialpha.png"],
+  },
 };
 
 const FEATURES = [

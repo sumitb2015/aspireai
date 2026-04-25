@@ -6,8 +6,41 @@ import { CheckCircle2, FileText, Sparkles, Zap, Shield, Search, CreditCard } fro
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "BespokeCV",
-  description: "AI-powered resume builder for global job seekers.",
+  title: "BespokeCV | AI-Powered ATS Resume Builder for India & Global Jobs",
+  description: "Create professional, ATS-friendly resumes with AI. One-click CV generation, industry-specific templates, and AI content suggestions for global job seekers.",
+  keywords: [
+    "AI Resume Builder",
+    "ATS Friendly Resume Templates",
+    "Professional CV Builder India",
+    "Online Resume Maker AI",
+    "Global Job Search Resume",
+    "BespokeCV",
+    "AspireAI HR Tech",
+    "One-click resume generation",
+    "Modern CV templates"
+  ],
+  openGraph: {
+    title: "BespokeCV | AI-Powered ATS Resume Builder",
+    description: "Stop worrying about ATS filters. BespokeCV uses advanced AI to help you build professional, high-impact resumes in minutes.",
+    url: "https://bespokecv.in",
+    siteName: "AspireAI Solutions",
+    images: [
+      {
+        url: "/og-bespokecv.png",
+        width: 1200,
+        height: 630,
+        alt: "BespokeCV AI Resume Builder",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BespokeCV | AI-Powered ATS Resume Builder",
+    description: "Build a professional, ATS-optimized resume in minutes with AI content generation.",
+    images: ["/og-bespokecv.png"],
+  },
 };
 
 const FEATURES = [

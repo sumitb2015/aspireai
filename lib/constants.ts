@@ -35,6 +35,18 @@ export const NAV_LINKS = [
 
 export const PRODUCTS = [
   {
+    id: "vigildrive",
+    name: "VigilDrive",
+    tagline: "Intelligent Driver Safety",
+    description: "Advanced computer vision-powered driver monitoring system. Real-time detection of fatigue, distraction, and unsafe driving patterns to prevent accidents.",
+    url: "/contact",
+    category: "Computer Vision · Fleet Safety",
+    features: ["Fatigue Detection", "Distraction Monitoring", "AI-Powered Alerts", "Behavior Analytics"],
+    accentColor: "#EF4444",
+    status: "enterprise",
+    badge: "New · Fleet Safety",
+  },
+  {
     id: "oialpha",
     name: "OI Alpha",
     tagline: "Professional Options Analytics",
@@ -57,18 +69,6 @@ export const PRODUCTS = [
     accentColor: "#00D4FF",
     status: "live",
     badge: "Live · AI Resume Builder",
-  },
-  {
-    id: "vigildrive",
-    name: "VigilDrive",
-    tagline: "Intelligent Driver Safety",
-    description: "Advanced computer vision-powered driver monitoring system. Real-time detection of fatigue, distraction, and unsafe driving patterns to prevent accidents.",
-    url: "/contact",
-    category: "Computer Vision · Fleet Safety",
-    features: ["Fatigue Detection", "Distraction Monitoring", "AI-Powered Alerts", "Behavior Analytics"],
-    accentColor: "#EF4444",
-    status: "enterprise",
-    badge: "New · Fleet Safety",
   }
 ];
 
