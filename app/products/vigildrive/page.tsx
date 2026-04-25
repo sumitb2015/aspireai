@@ -29,7 +29,10 @@ import {
   Maximize2,
   MousePointer2,
   Layers,
-  Search
+  Search,
+  Wrench,
+  BellRing,
+  Star
 } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -88,7 +91,7 @@ const CORE_TECHNOLOGY = [
   },
   {
     title: "Facial Feature Mapping",
-    description: "Real-time 3D face mapping to monitor driver state, head pose, and attention levels with sub-millisecond precision.",
+    description: "Real-time 3D face mapping to monitor driver state, head pose, and attention levels with real-time, frame-level inference at the edge.",
     icon: Camera
   },
   {
@@ -139,6 +142,60 @@ const HARDWARE_SPECS = [
   { label: "Calibration", value: "Fully Automatic" },
   { label: "Power", value: "9V - 36V Wide Input" }
 ];
+
+const HOW_IT_WORKS = [
+  {
+    step: "01",
+    title: "Simple Install",
+    description: "Plug-and-play hardware setup. Mounts in minutes to any vehicle cabin with automotive-grade stability.",
+    icon: Wrench
+  },
+  {
+    step: "02",
+    title: "AI Detection",
+    description: "Advanced neural engine monitors driver state in real-time, detecting even subtle micro-sleep and distraction events.",
+    icon: Eye
+  },
+  {
+    step: "03",
+    title: "Alert & Report",
+    description: "Immediate in-cabin audible alerts prevent accidents, while events are logged to the fleet dashboard for review.",
+    icon: BellRing
+  }
+];
+
+const TESTIMONIAL = {
+  quote: "Since deploying VigilDrive in our long-haul fleet, we've seen a dramatic reduction in critical fatigue events. The real-time alerts are a game-changer for our drivers' safety and our operational peace of mind.",
+  author: "Operations Head, National Logistics Partner",
+  rating: 5
+};
+
+const HOW_IT_WORKS = [
+  {
+    step: "01",
+    title: "Simple Install",
+    description: "Plug-and-play hardware setup. Mounts in minutes to any vehicle cabin with automotive-grade stability.",
+    icon: Wrench
+  },
+  {
+    step: "02",
+    title: "AI Detection",
+    description: "Advanced neural engine monitors driver state in real-time, detecting even subtle micro-sleep and distraction events.",
+    icon: Eye
+  },
+  {
+    step: "03",
+    title: "Alert & Report",
+    description: "Immediate in-cabin audible alerts prevent accidents, while events are logged to the fleet dashboard for review.",
+    icon: BellRing
+  }
+];
+
+const TESTIMONIAL = {
+  quote: "Since deploying VigilDrive in our long-haul fleet, we've seen a dramatic reduction in critical fatigue events. The real-time alerts are a game-changer for our drivers' safety and our operational peace of mind.",
+  author: "Operations Head, National Logistics Partner",
+  rating: 5
+};
 
 const PRICING = [
   {
@@ -195,9 +252,14 @@ export default function VigilDrivePage() {
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
         <div className="flex flex-col items-center text-center mb-24">
-          <Badge className="px-4 py-1.5 rounded-full bg-red-500/10 text-red-500 border border-red-500/20 text-xs font-bold uppercase tracking-widest mb-6">
-            Safety Intelligence for the Modern Road
-          </Badge>
+          <div className="flex flex-wrap justify-center gap-3 mb-6">
+            <Badge className="px-4 py-1.5 rounded-full bg-red-500/10 text-red-500 border border-red-500/20 text-xs font-bold uppercase tracking-widest">
+              Safety Intelligence for the Modern Road
+            </Badge>
+            <Badge className="px-4 py-1.5 rounded-full bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 text-xs font-bold uppercase tracking-widest">
+              AIS-140 Compatible
+            </Badge>
+          </div>
           <h1 className="text-4xl md:text-7xl font-syne font-extrabold mb-6 tracking-tighter">
             VigilDrive: Advanced <br /> <span className="text-red-500 text-glow-red">Driver Monitoring</span>
           </h1>
@@ -288,10 +350,34 @@ export default function VigilDrivePage() {
                       <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest font-bold">Inference Engine Analysis</p>
                    </div>
                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      Our proprietary neural engine detects abnormal eye-closure patterns and fatigue triggers with 99.7% accuracy across variable lighting and diverse driver demographics.
+                      Our proprietary neural engine detects abnormal eye-closure patterns and fatigue triggers with industry-leading accuracy across varied lighting and demographics.
                    </p>
                 </div>
              </div>
+          </div>
+        </div>
+
+        {/* How it Works Section */}
+        <div className="mb-32">
+          <SectionHeading 
+            heading="How VigilDrive Works"
+            subheading="A simple 3-step process designed to keep your fleet safe and your operations compliant."
+          />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {HOW_IT_WORKS.map((item, i) => (
+              <div key={i} className="relative p-8 rounded-3xl bg-slate-50 dark:bg-white/5 border border-white/10 group hover:border-red-500/30 transition-all duration-300">
+                <div className="absolute top-6 right-8 text-4xl font-syne font-black text-foreground/5 group-hover:text-red-500/10 transition-colors">
+                  {item.step}
+                </div>
+                <div className="p-4 rounded-2xl bg-red-500/10 text-red-500 w-fit mb-6 group-hover:scale-110 transition-transform">
+                  <item.icon size={32} />
+                </div>
+                <h3 className="text-2xl font-syne font-bold mb-4">{item.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -473,6 +559,30 @@ export default function VigilDrivePage() {
               </CardFooter>
             </Card>
           ))}
+        </div>
+
+        {/* Pilot Testimonial Section */}
+        <div className="mb-32">
+          <div className="max-w-4xl mx-auto p-12 rounded-[3rem] bg-red-500/5 border border-red-500/20 relative overflow-hidden">
+             <div className="absolute top-0 right-0 p-8 opacity-10">
+                <Star size={120} className="text-red-500" />
+             </div>
+             <div className="relative z-10 text-center">
+                <div className="flex justify-center gap-1 mb-8">
+                   {[...Array(TESTIMONIAL.rating)].map((_, i) => (
+                      <Star key={i} size={20} className="fill-red-500 text-red-500" />
+                   ))}
+                </div>
+                <blockquote className="text-2xl md:text-3xl font-syne font-medium italic mb-10 leading-relaxed text-foreground">
+                   "{TESTIMONIAL.quote}"
+                </blockquote>
+                <div className="flex flex-col items-center">
+                   <div className="w-12 h-1 bg-red-500 mb-4" />
+                   <p className="font-bold text-lg">{TESTIMONIAL.author}</p>
+                   <p className="text-sm text-muted-foreground uppercase tracking-widest font-mono mt-1">Pilot Program Partner</p>
+                </div>
+             </div>
+          </div>
         </div>
 
         {/* Final CTA */}

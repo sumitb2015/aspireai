@@ -104,8 +104,7 @@ export default function ProductsPage() {
                           <div className="p-6 rounded-xl bg-background/50 border border-white/10">
                             <Activity className="text-red-500 mb-4" size={32} />
                             <h4 className="font-bold mb-2">Real-time Vision Pipeline</h4>
-                            <p className="text-sm text-muted-foreground">Edge-optimized computer vision models detecting anomalies with 99.2% accuracy in diverse environments.</p>
-                          </div>
+                            <p className="text-sm text-muted-foreground">Edge-optimized computer vision models detecting anomalies with industry-leading accuracy in diverse environments.</p>                          </div>
                           <div className="p-6 rounded-xl bg-background/50 border border-white/10">
                             <AlertTriangle className="text-yellow-500 mb-4" size={32} />
                             <h4 className="font-bold mb-2">Predictive Safety Alerts</h4>
