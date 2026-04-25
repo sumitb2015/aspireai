@@ -32,6 +32,12 @@ export default function BlogPostPage({ params }: BlogPostProps) {
     notFound();
   }
 
+  // Pre-process content to remove empty paragraph tags and normalize spacing
+  const cleanContent = post.content
+    .replace(/<p>\s*<\/p>/g, '')
+    .replace(/<p><br\s*\/?><\/p>/g, '')
+    .replace(/\n{3,}/g, '\n\n');
+
   // Helper to detect first paragraph
   let pCount = 0;
 
@@ -101,7 +107,25 @@ export default function BlogPostPage({ params }: BlogPostProps) {
                 </div>
               </div>
               <div className="max-w-4xl">
-                <div className="prose prose-invert prose-cyan max-w-none">
+                <style dangerouslySetInnerHTML={{ __html: `
+                  .prose a {
+                    color: #2563eb !important;
+                    text-decoration: underline !important;
+                    text-underline-offset: 4px !important;
+                    transition: color 0.2s !important;
+                  }
+                  .prose a:hover {
+                    color: #1d4ed8 !important;
+                  }
+                  .prose p {
+                    margin-top: 0 !important;
+                    margin-bottom: 1.25rem !important;
+                  }
+                  .prose p + p {
+                    margin-top: 0 !important;
+                  }
+                ` }} />
+                <div className="prose prose-slate max-w-none">
                   <div className="text-foreground/90 text-[1.15rem] md:text-[1.25rem] leading-[1.8] font-dmSans font-light">
                       <ReactMarkdown
                         remarkPlugins={[remarkGfm]}
@@ -114,20 +138,29 @@ export default function BlogPostPage({ params }: BlogPostProps) {
                             <h3 className="text-xl md:text-2xl font-dmSans font-bold text-text-primary pt-10 mb-6 tracking-tight" {...props} />
                           ),
                           p: ({node, ...props}) => {
+                            // Bug 2: Remove empty paragraph tags
+                            if (!props.children || (Array.isArray(props.children) && props.children.length === 0)) return null;
+                            
                             pCount++;
                             const isLede = pCount === 1;
                             return (
                               <p 
-                                className={`mb-6 leading-relaxed ${
+                                className={`mt-0 mb-5 leading-relaxed ${
                                   isLede 
-                                    ? "text-xl md:text-2xl font-dmSans font-medium text-text-primary leading-[1.6] mb-12 opacity-100 first-letter:text-6xl first-letter:font-bold first-letter:text-accent-primary first-letter:mr-3 first-letter:float-left first-letter:leading-[1]" 
+                                    ? "text-xl md:text-2xl font-dmSans font-medium text-text-primary leading-[1.6] mb-10 opacity-100 first-letter:text-6xl first-letter:font-bold first-letter:text-accent-primary first-letter:mr-3 first-letter:float-left first-letter:leading-[1]" 
                                     : "opacity-90"
                                 }`} 
                                 {...props} 
                               />
                             );
                           },
-                          strong: ({node, ...props}) => <strong className="font-bold text-white opacity-100 border-b border-accent-primary/30" {...props} />,
+                          a: ({node, ...props}) => (
+                            <a 
+                              className="text-blue-600 underline decoration-2 underline-offset-2 hover:text-blue-800 transition-colors font-medium" 
+                              {...props} 
+                            />
+                          ),
+                          strong: ({node, ...props}) => <strong className="font-bold text-text-primary opacity-100 border-b border-accent-primary/30" {...props} />,
                           ul: ({node, ...props}) => <ul className="list-none ml-0 my-8 space-y-4" {...props} />,
                           li: ({node, ...props}) => (
                             <li className="flex gap-4 items-start pl-0">
@@ -158,7 +191,7 @@ export default function BlogPostPage({ params }: BlogPostProps) {
                           ),
                         }}
                       >
-                        {post.content}
+                        {cleanContent}
                       </ReactMarkdown>
                   </div>
                 </div>
