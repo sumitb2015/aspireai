@@ -466,7 +466,7 @@ export default function VigilDrivePage() {
               </CardContent>
               <CardFooter className="p-0 mt-12">
                 <Link href="/contact" className="w-full">
-                  <Button className={`w-full rounded-2xl py-7 text-lg font-bold ${tier.popular ? 'bg-red-500 hover:bg-red-600 text-white shadow-xl shadow-red-500/20' : ''}`} variant={tier.popular ? 'default' : 'outline'}>
+                  <Button className={`w-full rounded-2xl py-7 text-lg font-bold ${tier.popular ? 'bg-red-500 hover:bg-red-600 text-white shadow-xl shadow-red-500/20' : ''}`} variant={tier.popular ? 'primary' : 'outline'}>
                     Select {tier.name}
                   </Button>
                 </Link>
