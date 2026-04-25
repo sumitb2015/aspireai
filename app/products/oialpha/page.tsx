@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { CheckCircle2, BarChart3, TrendingUp, Cpu, Database, Layout, ShieldCheck } from "lucide-react";
 import { Metadata } from "next";
+import ImageCarousel from "./ImageCarousel";
 
 export const metadata: Metadata = {
   title: "OI Alpha | Professional Options Analytics & OI Tracking Tool",
@@ -78,25 +79,7 @@ export default function OIAlphaPage() {
 
         {/* Mockup Area */}
         <div className="relative mb-32 max-w-5xl mx-auto">
-          <div className="aspect-video bg-surface rounded-[2rem] border border-border/50 overflow-hidden shadow-2xl relative">
-             <div className="scan-line" />
-             <div className="p-8 h-full flex flex-col gap-6 opacity-40">
-                <div className="h-12 bg-border/50 w-1/4 rounded-lg" />
-                <div className="flex-grow grid grid-cols-12 gap-4">
-                   <div className="col-span-8 bg-border/30 rounded-xl" />
-                   <div className="col-span-4 flex flex-col gap-4">
-                      <div className="flex-grow bg-border/30 rounded-xl" />
-                      <div className="flex-grow bg-border/30 rounded-xl" />
-                   </div>
-                </div>
-             </div>
-             <div className="absolute inset-0 flex items-center justify-center">
-                <div className="p-12 text-center">
-                   <h3 className="text-2xl font-syne font-bold mb-4">Dark Terminal Aesthetic</h3>
-                   <p className="text-text-secondary">Designed for the modern quantitative trader.</p>
-                </div>
-             </div>
-          </div>
+          <ImageCarousel />
           <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent-secondary/20 blur-[80px] -z-10" />
           <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-accent-primary/20 blur-[80px] -z-10" />
         </div>
