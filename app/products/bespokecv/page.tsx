@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { CheckCircle2, FileText, Sparkles, Zap, Shield, Search, CreditCard } from "lucide-react";
 import { Metadata } from "next";
+import ImageCarousel from "./ImageCarousel";
 
 export const metadata: Metadata = {
   title: "BespokeCV | AI-Powered ATS Resume Builder for India & Global Jobs",
@@ -76,19 +77,9 @@ export default function BespokeCVPage() {
         </div>
 
         {/* Mockup Area */}
-        <div className="relative mb-32 max-w-4xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-             {[1, 2, 3].map(i => (
-                <div key={i} className="aspect-[3/4] glass-card rounded-2xl p-4 flex flex-col gap-4 opacity-40 hover:opacity-100 transition-opacity">
-                   <div className="h-4 bg-accent-primary/30 w-3/4 rounded" />
-                   <div className="h-2 bg-accent-primary/20 w-1/2 rounded" />
-                   <div className="mt-4 flex-grow border border-border/50 rounded flex items-center justify-center">
-                      <FileText className="text-accent-primary/20" size={48} />
-                   </div>
-                </div>
-             ))}
-          </div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-accent-primary/5 blur-[120px] -z-10" />
+        <div className="relative mb-32 max-w-5xl mx-auto">
+          <ImageCarousel />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-accent-primary/10 blur-[120px] -z-10" />
         </div>
 
         <SectionHeading 

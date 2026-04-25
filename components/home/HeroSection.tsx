@@ -79,10 +79,10 @@ export default function HeroSection() {
                 tag: "Popular"
               },
               {
-                title: "Enterprise AI",
-                desc: "Custom LLM fine-tuning and autonomous agents for business scale.",
-                icon: <div className="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-500 flex items-center justify-center font-bold text-xs">EA</div>,
-                tag: "Solutions"
+                title: "VigilDrive Product",
+                desc: "AI-powered driver monitoring system for real-time fatigue and distraction detection.",
+                icon: <div className="w-10 h-10 rounded-lg bg-red-500/10 text-red-500 flex items-center justify-center font-bold text-xs">VD</div>,
+                tag: "Safety"
               }
             ].map((item, i) => (
               <div 
