@@ -168,19 +168,16 @@ const TESTIMONIALS = [
   {
     quote: "As a long-distance driver, VigilDrive is like having a second pair of eyes. It caught my fatigue twice on a night run to Mumbai. It truly saves lives.",
     author: "Rajesh K.",
-    role: "Professional Driver",
     rating: 5
   },
   {
     quote: "I installed this in my SUV for family trips. The distraction alerts are incredibly precise, especially when I'm using navigation. Highly recommend.",
     author: "Amit S.",
-    role: "Individual Car Owner",
     rating: 5
   },
   {
     quote: "The peace of mind I get knowing my son is protected by this AI system while he's driving back from college late at night is priceless.",
     author: "Sunita M.",
-    role: "Concerned Parent",
     rating: 5
   }
 ];
@@ -572,7 +569,6 @@ export default function VigilDrivePage() {
                   </div>
                   <div>
                     <p className="font-bold text-sm">{t.author}</p>
-                    <p className="text-xs text-muted-foreground uppercase tracking-wider font-mono">{t.role}</p>
                   </div>
                 </div>
               </div>
