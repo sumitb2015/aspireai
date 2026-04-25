@@ -59,43 +59,10 @@ export default function BlogPostPage({ params }: BlogPostProps) {
         <div className="flex flex-col lg:flex-row gap-16">
           {/* Sidebar - Sticky Metadata & Share */}
           <aside className="lg:w-1/4 order-2 lg:order-1">
-            <div className="sticky top-40 space-y-12">
-              <Link href="/blog" className="inline-flex items-center gap-2 text-text-secondary hover:text-accent-primary transition-colors group text-sm font-bold uppercase tracking-widest">
+            <div className="sticky top-40">
+              <Link href="/blog" className="inline-flex items-center gap-2 text-text-secondary hover:text-accent-primary transition-colors group text-sm font-bold uppercase tracking-widest mt-6 mb-4">
                 <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> Back to Blog
               </Link>
-
-              <div className="space-y-8">
-                <div className="space-y-4">
-                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-primary block">Published on</span>
-                  <div className="flex items-center gap-3 text-text-primary font-syne font-bold">
-                    <Calendar size={18} className="text-accent-primary/50" />
-                    {post.date}
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-primary block">Read Time</span>
-                  <div className="flex items-center gap-3 text-text-primary font-syne font-bold">
-                    <Clock size={18} className="text-accent-primary/50" />
-                    {post.readTime}
-                  </div>
-                </div>
-
-                <div className="space-y-4 pt-8 border-t border-border/30">
-                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-primary block">Share Article</span>
-                  <div className="flex gap-4">
-                    <button className="w-10 h-10 rounded-xl border border-border/50 flex items-center justify-center hover:bg-accent-primary hover:text-white transition-all">
-                      <Twitter size={18} />
-                    </button>
-                    <button className="w-10 h-10 rounded-xl border border-border/50 flex items-center justify-center hover:bg-accent-primary hover:text-white transition-all">
-                      <Linkedin size={18} />
-                    </button>
-                    <button className="w-10 h-10 rounded-xl border border-border/50 flex items-center justify-center hover:bg-accent-primary hover:text-white transition-all">
-                      <Share2 size={18} />
-                    </button>
-                  </div>
-                </div>
-              </div>
             </div>
           </aside>
 
@@ -104,10 +71,7 @@ export default function BlogPostPage({ params }: BlogPostProps) {
             <article>
               <div className="mb-12">
                 <Badge variant="primary" className="mb-6 px-5 py-1.5 text-[10px] tracking-[0.2em] uppercase">{post.category}</Badge>
-                <h1 className="text-3xl md:text-4xl lg:text-6xl font-dmSans font-extrabold mb-10 leading-tight tracking-tight text-text-primary">
-                  {post.title}
-                </h1>
-
+                
                 <div className="relative w-full aspect-[21/10] rounded-[2rem] overflow-hidden mb-12 shadow-2xl shadow-accent-primary/5 group">
                   <img 
                     src={post.coverImage} 
@@ -115,14 +79,35 @@ export default function BlogPostPage({ params }: BlogPostProps) {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
-              </div>
 
+                <h1 className="text-3xl md:text-4xl lg:text-6xl font-dmSans font-extrabold mt-8 mb-6 leading-tight tracking-tight text-text-primary">
+                  {post.title}
+                </h1>
+
+                <div className="flex items-center gap-6 flex-wrap text-sm text-text-secondary mt-4 mb-8">
+                  <span className="flex items-center gap-2">
+                    <Calendar size={16} className="text-accent-primary/50" />
+                    {post.date}
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <Clock size={16} className="text-accent-primary/50" />
+                    {post.readTime}
+                  </span>
+                  <Badge variant="secondary" className="px-3 py-1 text-[10px] tracking-wider uppercase font-bold bg-surface border-border/30">
+                    {post.category}
+                  </Badge>
+                  <span className="flex items-center gap-2 cursor-pointer hover:text-accent-primary transition-colors">
+                    Share <ArrowRight size={14} />
+                  </span>
+                </div>
+              </div>
               <div className="max-w-4xl">
                 <div className="prose prose-invert prose-cyan max-w-none">
                   <div className="text-foreground/90 text-[1.15rem] md:text-[1.25rem] leading-[1.8] font-dmSans font-light">
                       <ReactMarkdown
                         remarkPlugins={[remarkGfm]}
                         components={{
+                          h1: () => null,
                           h2: ({node, ...props}) => (
                             <h2 className="text-2xl md:text-3xl font-dmSans font-bold text-text-primary pt-12 pb-5 mb-8 border-b-2 border-accent-primary/10 tracking-tight" {...props} />
                           ),
