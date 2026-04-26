@@ -5,6 +5,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Toaster } from "@/components/ui/Toaster";
+import { Analytics } from "@vercel/analytics/next";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -100,6 +101,7 @@ export default function RootLayout({
           </main>
           <Footer />
           <Toaster />
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
