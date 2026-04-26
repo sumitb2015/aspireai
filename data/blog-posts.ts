@@ -94,7 +94,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "April 15, 2026",
     readTime: "25 min read",
     content: blog18,
-    coverImage: "https://images.unsplash.com/photo-1589232844356-4416bc5c867f?auto=format&fit=crop&q=80&w=1200"
+    coverImage: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1200"
   },
   {
     id: "1",
