@@ -11,7 +11,7 @@ const TECH = [
   { name: "Next.js", cat: "Frontend" },
   { name: "FastAPI", cat: "Backend" },
   { name: "OpenCV", cat: "Vision" },
-  { name: "YOLOv8", cat: "Vision" },
+  { name: "YOLO11", cat: "Vision" },
   { name: "PostgreSQL", cat: "Database" },
   { name: "Redis", cat: "Cache" },
   { name: "Docker", cat: "Infrastructure" },

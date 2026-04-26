@@ -11,7 +11,7 @@ const TECH_STACK = [
   "Next.js",
   "FastAPI",
   "OpenCV",
-  "YOLOv8",
+  "YOLO11",
   "PostgreSQL",
   "Redis",
   "Docker",

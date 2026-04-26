@@ -3,7 +3,7 @@ export const content = `
 
 ## Executive Summary
 
-As we navigate through 2025, the Indian insurance landscape is witnessing a seismic shift. Driven by the convergence of high-speed 5G connectivity, the maturation of Computer Vision (CV) models like YOLOv8, and the pervasive adoption of Large Language Models (LLMs), the industry has moved from "digital-first" to "AI-native." At AspireAI Solutions, based in the heart of India's technology hub, Pune, we have observed this transformation firsthand. The traditional, cumbersome claims process that once took 7-10 days is being replaced by near-instantaneous automated workflows. This article provides a comprehensive analysis of how AI is redefining motor, health, and life insurance in India, with a specific focus on vehicle damage detection, predictive risk assessment, and the regulatory catalysts provided by the IRDAI.
+As we navigate through 2025, the Indian insurance landscape is witnessing a seismic shift. Driven by the convergence of high-speed 5G connectivity, the maturation of Computer Vision (CV) models like YOLO11, and the pervasive adoption of Large Language Models (LLMs), the industry has moved from "digital-first" to "AI-native." At AspireAI Solutions, based in the heart of India's technology hub, Pune, we have observed this transformation firsthand. The traditional, cumbersome claims process that once took 7-10 days is being replaced by near-instantaneous automated workflows. This article provides a comprehensive analysis of how AI is redefining motor, health, and life insurance in India, with a specific focus on vehicle damage detection, predictive risk assessment, and the regulatory catalysts provided by the IRDAI.
 
 ## The Current State of the Indian Insurance Market (2025)
 
@@ -31,14 +31,14 @@ LLMs have evolved from simple chatbots to "Agentic AI." In the Indian insurance 
 ### 3. Predictive Analytics
 By utilizing historical data and real-time inputs (telematics), predictive analytics allow for "Usage-Based Insurance" (UBI). In 2025, Indian fleet owners are increasingly adopting "Pay-as-you-go" and "Pay-how-you-drive" models, where premiums are adjusted dynamically based on driver behavior.
 
-## Deep Dive: Vehicle Damage Detection using YOLOv8
+## Deep Dive: Vehicle Damage Detection using YOLO11
 
-At AspireAI, we specialize in implementing **YOLOv8 (You Only Look Once version 8)** for high-precision vehicle damage detection. For an Indian market characterized by a diverse range of vehicles—from entry-level hatchbacks to luxury SUVs and commercial three-wheelers—generic models often fail.
+At AspireAI, we specialize in implementing **YOLO11 (You Only Look Once version 11)** for high-precision vehicle damage detection. For an Indian market characterized by a diverse range of vehicles—from entry-level hatchbacks to luxury SUVs and commercial three-wheelers—generic models often fail.
 
-### Technical Architecture of the YOLOv8 Pipeline
-The YOLOv8 architecture is particularly suited for insurance because of its **anchor-free detection** and **decoupled head**. Here is how we implement it:
+### Technical Architecture of the YOLO11 Pipeline
+The YOLO11 architecture is particularly suited for insurance because of its **anchor-free detection** and **decoupled head**. Here is how we implement it:
 
-*   **Detection Variants:** For mobile-side inference (edge computing), we deploy \`YOLOv8n\` (Nano). This allows the user's phone to provide real-time feedback (e.g., "Image too blurry" or "Move closer to the dent") before the photo is even uploaded. For final adjudication on the server, we use \`YOLOv8l\` (Large) to ensure maximum mAP (mean Average Precision).
+*   **Detection Variants:** For mobile-side inference (edge computing), we deploy \`YOLO11n\` (Nano). This allows the user's phone to provide real-time feedback (e.g., "Image too blurry" or "Move closer to the dent") before the photo is even uploaded. For final adjudication on the server, we use \`YOLO11l\` (Large) to ensure maximum mAP (mean Average Precision).
 *   **Data Augmentation for Indian Roads:** Our models are trained on a custom dataset that includes vehicles in varying lighting (monsoon rains, harsh midday sun) and diverse environments (rural dusty roads, crowded urban junctions). We use **Mosaic Augmentation** to help the model identify small objects (like hairline scratches) in complex scenes.
 *   **Part-to-Damage Mapping:** The pipeline doesn't just detect a "dent." It utilizes a multi-label classification approach to identify the specific part (e.g., "Front Right Fender") and the damage type (e.g., "Minor Dent with Paint Loss").
 *   **Severity Assessment:** By calculating the "Damage Ratio"—the area of the detected bounding box relative to the total area of the vehicle part—the AI assigns a severity score (Minor, Moderate, Severe). This score is then mapped to a local Parts & Labor Database (PLD) to generate a repair estimate.
@@ -94,7 +94,7 @@ A real-world example of this technology in action is our **VigilDrive** platform
 **The Implementation:**
 1.  **DMS (Driver Monitoring System):** Using AI to detect driver fatigue and distraction in real-time.
 2.  **Instant Damage Scan:** In the event of an accident, the driver uses the VigilDrive app to perform a 360° scan of the vehicle.
-3.  **YOLOv8 Adjudication:** The AI instantly identifies the damage and generates a "Digital Job Card" for the workshop, preventing the workshop from overcharging for unrelated repairs.
+3.  **YOLO11 Adjudication:** The AI instantly identifies the damage and generates a "Digital Job Card" for the workshop, preventing the workshop from overcharging for unrelated repairs.
 
 **The Result:** A 30% reduction in minor accidents and a 45% faster claim settlement time, saving the fleet owner millions in downtime and premiums.
 

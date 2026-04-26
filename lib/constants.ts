@@ -186,22 +186,22 @@ export const SERVICES = [
     id: "computer-vision",
     title: "Computer Vision",
     seoTitle: "Computer Vision & Video Analytics Solutions Company India",
-    seoDescription: "Leading computer vision company in India using YOLOv8 & PyTorch. We deliver real-time driver monitoring, vehicle damage detection, and visual analytics.",
+    seoDescription: "Leading computer vision company in India using YOLO11 & PyTorch. We deliver real-time driver monitoring, vehicle damage detection, and visual analytics.",
     description: "Extract actionable insights from visual data using state-of-the-art models.",
     icon: Eye,
     slug: "computer-vision",
     content: [
       {
         heading: "Advanced Computer Vision Services in India",
-        text: "Transform visual data into actionable business intelligence. As a premier computer vision company in India, we deliver state-of-the-art solutions for real-time object detection, image segmentation, and facial recognition using the latest models like YOLOv8 and Detectron2."
+        text: "Transform visual data into actionable business intelligence. As a premier computer vision company in India, we deliver state-of-the-art solutions for real-time object detection, image segmentation, and facial recognition using the latest models like YOLO11 and Detectron2."
       },
       {
         heading: "Specialized Video Analytics & Driver Safety",
         text: "Our expertise extends to specialized domains like fleet safety and insurtech. We build intelligent driver monitoring systems (DMS) that detect fatigue and distraction in real-time, as well as automated vehicle damage detection systems for insurance platforms using custom-trained PyTorch models."
       },
       {
-        heading: "YOLOv8 Consulting & Visual AI Deployment",
-        text: "Deploying high-performance vision models requires deep expertise in hardware optimization. Our YOLOv8 consulting team helps you bridge the gap between research and real-world deployment on edge devices, ensuring low-latency inference for manufacturing, retail, and security applications."
+        heading: "YOLO11 Consulting & Visual AI Deployment",
+        text: "Deploying high-performance vision models requires deep expertise in hardware optimization. Our YOLO11 consulting team helps you bridge the gap between research and real-world deployment on edge devices, ensuring low-latency inference for manufacturing, retail, and security applications."
       }
     ],
     details: {
@@ -212,7 +212,7 @@ export const SERVICES = [
         "Facial Recognition",
         "Anomaly Detection in Video"
       ],
-      techStack: ["YOLOv8", "OpenCV", "TensorFlow", "Detectron2"]
+      techStack: ["YOLO11", "OpenCV", "TensorFlow", "Detectron2"]
     }
   },
   {

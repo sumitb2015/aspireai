@@ -19,7 +19,7 @@ const VALUES = [
 const TECH_STACK = [
   "GPT-4o", "LLaMA 3", "PyTorch", "TensorFlow", "FastAPI", "Next.js", "TypeScript", 
   "Tailwind CSS", "LangChain", "Hugging Face", "Docker", "AWS", "Vercel", "PostgreSQL",
-  "Redis", "OpenCV", "YOLOv8", "Detectron2", "LangGraph", "CrewAI"
+  "Redis", "OpenCV", "YOLO11", "Detectron2", "LangGraph", "CrewAI"
 ];
 
 export default function AboutPage() {

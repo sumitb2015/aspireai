@@ -1,6 +1,6 @@
 import { content as blog1 } from "../content/blogs/ai-transforming-indian-insurance-2025";
 import { content as blog2 } from "../content/blogs/fine-tuning-llama-3-indian-enterprise";
-import { content as blog3 } from "../content/blogs/automated-vehicle-damage-detection-yolov8-case-study";
+import { content as blog3 } from "../content/blogs/automated-vehicle-damage-detection-yolo11-case-study";
 import { content as blog4 } from "../content/blogs/gen-ai-use-cases-indian-fintech";
 import { content as blog5 } from "../content/blogs/options-analytics-failing-retail-traders";
 import { content as blog6 } from "../content/blogs/langchain-vs-llamaindex-2025";
@@ -48,9 +48,9 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     id: "3",
-    title: "Automated Vehicle Damage Detection: A YOLOv8 Case Study",
-    slug: "vehicle-damage-detection-yolov8-case-study",
-    excerpt: "A deep dive into how we built a high-precision damage detection system for insurance automation and used car platforms using YOLOv8.",
+    title: "Automated Vehicle Damage Detection: A YOLO11 Case Study",
+    slug: "vehicle-damage-detection-yolo11-case-study",
+    excerpt: "A deep dive into how we built a high-precision damage detection system for insurance automation and used car platforms using YOLO11.",
     category: "Technical Guides",
     date: "March 15, 2026",
     readTime: "25 min read",
