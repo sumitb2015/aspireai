@@ -20,9 +20,7 @@ export const SITE_CONFIG = {
   location: "Pune, India",
   founded: "2024",
   socials: {
-    linkedin: "#",
-    twitter: "#",
-    github: "#",
+    linkedin: "https://www.linkedin.com/company/aspireaisolutions/about/?viewAsMember=true",
   }
 };
 
