@@ -2,6 +2,8 @@ import Link from "next/link";
 import { SITE_CONFIG, PRODUCTS } from "@/lib/constants";
 import { Linkedin, Twitter, Github } from "lucide-react";
 
+import { Logo } from "@/components/ui/Logo";
+
 export default function Footer() {
   return (
     <footer className="relative border-t border-border/50 bg-background pt-16 pb-8 px-6 overflow-hidden">
@@ -10,9 +12,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
         {/* Brand Column */}
         <div className="flex flex-col gap-6">
-          <Link href="/" className="flex items-center gap-1">
-            <span className="text-2xl font-syne font-extrabold text-text-secondary">Aspire</span>
-            <span className="text-2xl font-syne font-extrabold text-accent-primary">AI</span>
+          <Link href="/">
+            <Logo iconSize={40} fontSize="text-2xl" />
           </Link>
           <p className="text-text-secondary text-sm leading-relaxed max-w-xs">
             {SITE_CONFIG.tagline}. Delivering advanced AI solutions to businesses worldwide.

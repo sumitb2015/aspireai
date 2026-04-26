@@ -10,6 +10,8 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
+import { Logo } from "@/components/ui/Logo";
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -27,9 +29,8 @@ export default function Navbar() {
       scrolled ? "bg-background/80 backdrop-blur-md border-b py-3 shadow-sm" : "bg-transparent py-5"
     )}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 group">
-           <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white font-black italic">A</div>
-           <span className="text-xl font-syne font-extrabold tracking-tighter">AspireAI</span>
+        <Link href="/">
+          <Logo iconSize={32} fontSize="text-xl" />
         </Link>
 
         {/* Desktop Nav */}
