@@ -256,8 +256,8 @@ export const SERVICES = [
 ];
 
 export const STATS = [
-  { label: "Enterprise AI Models", value: 8, suffix: "+" },
-  { label: "Proprietary Datasets", value: 15, suffix: "+" },
+  { label: "Live AI Products", value: 3, suffix: "" },
+  { label: "Specialized Services", value: 5, suffix: "" },
   { label: "Monthly Active Users", value: 100, suffix: "+" },
   { label: "Global Presence", value: "Worldwide", isText: true },
 ];

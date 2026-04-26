@@ -46,7 +46,7 @@ export default function ProcessSection() {
                 <div className={`w-16 h-16 rounded-2xl ${step.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                   <step.icon size={32} />
                 </div>
-                <div className="text-4xl font-syne font-black opacity-10 absolute top-8 right-8">
+                <div className="text-4xl font-syne font-black text-primary/10 absolute top-8 right-8 group-hover:text-primary/20 transition-colors">
                   0{i + 1}
                 </div>
                 <CardTitle className="text-2xl font-syne font-bold">{step.title}</CardTitle>
