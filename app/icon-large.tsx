@@ -3,8 +3,8 @@ import { ImageResponse } from 'next/og'
 export const runtime = 'edge'
  
 export const size = {
-  width: 48,
-  height: 48,
+  width: 192,
+  height: 192,
 }
 export const contentType = 'image/png'
  
@@ -13,7 +13,7 @@ export default function Icon() {
     (
       <div
         style={{
-          fontSize: 36,
+          fontSize: 144,
           background: '#0070f3',
           width: '100%',
           height: '100%',
@@ -21,7 +21,7 @@ export default function Icon() {
           alignItems: 'center',
           justifyContent: 'center',
           color: 'white',
-          borderRadius: '8px',
+          borderRadius: '32px',
           fontWeight: 900,
           fontStyle: 'italic',
         }}

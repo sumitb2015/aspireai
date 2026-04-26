@@ -51,6 +51,16 @@ export const metadata: Metadata = {
     creator: "@aspireai",
   },
   robots: { index: true, follow: true },
+  icons: {
+    icon: [
+      { url: '/icon', sizes: '48x48', type: 'image/png' },
+      { url: '/icon-large', sizes: '192x192', type: 'image/png' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    apple: [
+      { url: '/apple-icon', sizes: '180x180', type: 'image/png' },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -63,7 +73,7 @@ export default function RootLayout({
     "@type": "Organization",
     "name": "AspireAI Solutions",
     "url": "https://aspireaisolutions.com",
-    "logo": "https://aspireaisolutions.com/logo.png",
+    "logo": "https://aspireaisolutions.com/icon",
     "description": "Leading AI products and services company based in Pune, India, specializing in Generative AI, Computer Vision, and Intelligent Agents.",
     "address": {
       "@type": "PostalAddress",
