@@ -56,7 +56,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "April 24, 2026",
     readTime: "20 min read",
     content: blog14,
-    coverImage: "https://images.unsplash.com/photo-1545147980-c9d25a65a451?auto=format&fit=crop&q=80&w=1200"
+    coverImage: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=1200"
   },
   {
     id: "15",
@@ -89,7 +89,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "April 18, 2026",
     readTime: "18 min read",
     content: blog17,
-    coverImage: "https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&q=80&w=1200"
+    coverImage: "https://images.unsplash.com/photo-1473186533359-400fe81979ad?auto=format&fit=crop&q=80&w=1200"
   },
   {
     id: "18",
