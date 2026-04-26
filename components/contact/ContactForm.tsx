@@ -178,7 +178,7 @@ export default function ContactForm() {
           <Button 
             type="submit"
             size="lg" 
-            className="w-full h-14 text-lg font-syne font-bold"
+            className="w-full h-14 text-sm font-bold uppercase tracking-widest"
             disabled={isSubmitting}
           >
             {isSubmitting ? (
