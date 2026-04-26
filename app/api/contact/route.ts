@@ -20,30 +20,28 @@ export async function POST(req: Request) {
     // Initialize Resend only when needed
     const resendApiKey = process.env.RESEND_API_KEY;
     
-    if (resendApiKey) {
-      const resend = new Resend(resendApiKey);
-      // In a real production environment:
-      /*
-      await resend.emails.send({
-        from: "AspireAI Web <onboarding@resend.dev>",
-        to: "contact@aspireaisolutions.com",
-        subject: `New Inquiry from ${name} - ${service}`,
-        reply_to: email,
-        html: `
-          <h2>New Inquiry from AspireAI Website</h2>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Company:</strong> ${company || "N/A"}</p>
-          <p><strong>Service:</strong> ${service}</p>
-          <p><strong>Message:</strong></p>
-          <p>${message}</p>
-        `,
-      });
-      */
+    if (!resendApiKey) {
+      console.error("RESEND_API_KEY is not defined in environment variables");
+      return NextResponse.json({ success: false, error: "Email service not configured" }, { status: 500 });
     }
 
-    // Simulating delay
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    const resend = new Resend(resendApiKey);
+    
+    await resend.emails.send({
+      from: "AspireAI Web <no-reply@aspireaisolutions.com>",
+      to: "contact@aspireaisolutions.com",
+      subject: `New Inquiry from ${name} - ${service}`,
+      reply_to: email,
+      html: `
+        <h2>New Inquiry from AspireAI Website</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Company:</strong> ${company || "N/A"}</p>
+        <p><strong>Service:</strong> ${service}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message}</p>
+      `,
+    });
 
     return NextResponse.json({ success: true, message: "Email sent successfully" });
   } catch (error) {
