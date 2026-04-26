@@ -29,4 +29,4 @@ India, as a global hub for IT services and product development, is rapidly adopt
 Vibe Coding is not the end of the software engineer; it is their ascension. By abstracting away the mechanical translation of logic to syntax, developers are now free to focus on what truly matters: solving hard problems and delivering value.
 ---
 **Keywords:** *Vibe Coding, Intent-Driven Development, Agentic IDEs, AI Software Engineering 2026, AspireAI Solutions, Cursor, LLMs for Code, Future of Work.*
-\`;
+`;

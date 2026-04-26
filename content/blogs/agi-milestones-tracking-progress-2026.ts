@@ -26,4 +26,4 @@ The timeline to AGI is contested, with aggressive estimates pointing to 2029 and
 Tracking AGI is no longer about waiting for a single "spark of consciousness," but observing the systematic dismantling of human cognitive moats. As we navigate 2026, the focus must shift from *when* AGI will arrive, to how we align its architecture with human flourishing.
 ---
 **Keywords:** *Artificial General Intelligence, AGI Progress 2026, AI Reasoning Models, Causal AI, Future of AI, AspireAI Solutions, System 2 Thinking, Agentic Workflows.*
-\`;
+`;
