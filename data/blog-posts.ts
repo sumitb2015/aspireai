@@ -16,6 +16,12 @@ import { content as blog15 } from "../content/blogs/sensor-fusion-lidar-camera-a
 import { content as blog16 } from "../content/blogs/synthetic-data-cv-autonomous-vehicles";
 import { content as blog17 } from "../content/blogs/edge-ai-low-latency-pedestrian-detection";
 import { content as blog18 } from "../content/blogs/regulatory-compliance-av-cv-perspective";
+import { content as blog19 } from "../content/blogs/vibe-coding-redefining-software-engineering-2026";
+import { content as blog20 } from "../content/blogs/beyond-transformers-next-gen-deep-learning";
+import { content as blog21 } from "../content/blogs/quantum-machine-learning-enterprise-reality";
+import { content as blog22 } from "../content/blogs/neuro-symbolic-ai-logic-and-learning";
+import { content as blog23 } from "../content/blogs/decentralized-ai-agents-on-blockchain";
+import { content as blog24 } from "../content/blogs/agi-milestones-tracking-progress-2026";
 
 export interface BlogPost {
   id: string;
@@ -227,5 +233,71 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "20 min read",
     content: blog12,
     coverImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200"
+  },
+  {
+    id: "19",
+    title: "The Rise of Vibe Coding: How AI is Redefining Software Engineering in 2026",
+    slug: "vibe-coding-redefining-software-engineering-2026",
+    excerpt: "Software engineering is undergoing its most profound transformation. Explore how 'Vibe Coding' is enabling teams to build complex systems through intent-driven development.",
+    category: "AI Strategy",
+    date: "May 15, 2026",
+    readTime: "18 min read",
+    content: blog19,
+    coverImage: "https://images.unsplash.com/photo-1655393001768-d946c998b49c?auto=format&fit=crop&q=80&w=1200"
+  },
+  {
+    id: "20",
+    title: "Beyond Transformers: The Next Generation of Deep Learning Architectures",
+    slug: "beyond-transformers-next-gen-deep-learning",
+    excerpt: "As we scale into 2026, the quadratic computational cost of Transformers has forced researchers to look beyond. Discover the rise of SSMs, Mamba, and Liquid Neural Networks.",
+    category: "Technical Guides",
+    date: "May 12, 2026",
+    readTime: "22 min read",
+    content: blog20,
+    coverImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200"
+  },
+  {
+    id: "21",
+    title: "Quantum Machine Learning: Moving from Theory to Enterprise Reality (2026)",
+    slug: "quantum-machine-learning-enterprise-reality",
+    excerpt: "2026 marks an inflection point where NISQ devices are yielding practical advantages for specific machine learning workloads in finance and drug discovery.",
+    category: "AI Strategy",
+    date: "May 10, 2026",
+    readTime: "25 min read",
+    content: blog21,
+    coverImage: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80&w=1200"
+  },
+  {
+    id: "22",
+    title: "Neuro-Symbolic AI: Bridging the Gap Between Logic and Learning",
+    slug: "neuro-symbolic-ai-logic-and-learning",
+    excerpt: "To build AI systems that can be trusted with mission-critical tasks, 2026 has seen the adoption of Neuro-Symbolic AI, marrying deep learning with rigorous logic.",
+    category: "Technical Guides",
+    date: "May 08, 2026",
+    readTime: "20 min read",
+    content: blog22,
+    coverImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200"
+  },
+  {
+    id: "23",
+    title: "The Decentralized Web: AI Agents Operating on the Blockchain",
+    slug: "decentralized-ai-agents-on-blockchain",
+    excerpt: "Explore the technical infrastructure behind Decentralized AI, where autonomous agents possess crypto wallets and execute cross-chain transactions.",
+    category: "AI Strategy",
+    date: "May 05, 2026",
+    readTime: "24 min read",
+    content: blog23,
+    coverImage: "https://images.unsplash.com/photo-1639762681485-074b7f4ec651?auto=format&fit=crop&q=80&w=1200"
+  },
+  {
+    id: "24",
+    title: "AGI Milestones: Tracking the Progress of Artificial General Intelligence in 2026",
+    slug: "agi-milestones-tracking-progress-2026",
+    excerpt: "AGI has transitioned from philosophical debate to engineering timeline. Track the critical thresholds crossed in mid-2026, from reasoning breakthroughs to multimodal fluency.",
+    category: "AI Strategy",
+    date: "May 01, 2026",
+    readTime: "21 min read",
+    content: blog24,
+    coverImage: "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&q=80&w=1200"
   }
 ];
