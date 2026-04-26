@@ -8,12 +8,12 @@ interface LogoProps {
   showText?: boolean;
 }
 
-export function Logo({ 
+export const Logo = ({ 
   className, 
   iconSize = 32, 
   fontSize = "text-xl", 
   showText = true 
-}: LogoProps) {
+}: LogoProps) => {
   return (
     <div className={cn("flex items-center gap-2.5 group", className)}>
       <div 
@@ -30,4 +30,6 @@ export function Logo({
       )}
     </div>
   );
-}
+};
+
+export default Logo;

@@ -10,6 +10,12 @@ import { content as blog9 } from "../content/blogs/secure-rag-pipelines-banking"
 import { content as blog10 } from "../content/blogs/multi-agent-systems-crewai-automation";
 import { content as blog11 } from "../content/blogs/cost-custom-llm-development-india";
 import { content as blog12 } from "../content/blogs/aspireai-product-updates-q1-2024";
+import { content as blog13 } from "../content/blogs/state-of-autonomous-driving-india-2026";
+import { content as blog14 } from "../content/blogs/vit-vs-cnns-traffic-analysis-2026";
+import { content as blog15 } from "../content/blogs/sensor-fusion-lidar-camera-adas";
+import { content as blog16 } from "../content/blogs/synthetic-data-cv-autonomous-vehicles";
+import { content as blog17 } from "../content/blogs/edge-ai-low-latency-pedestrian-detection";
+import { content as blog18 } from "../content/blogs/regulatory-compliance-av-cv-perspective";
 
 export interface BlogPost {
   id: string;
@@ -24,6 +30,72 @@ export interface BlogPost {
 }
 
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: "13",
+    title: "The State of Autonomous Driving in India: Navigating Chaotic Traffic with Edge AI (2026)",
+    slug: "state-of-autonomous-driving-india-2026",
+    excerpt: "While Level 5 autonomy remains a challenge, India is leading the way in Level 3 and 4 restricted autonomous systems using hardened Edge AI.",
+    category: "AI Strategy",
+    date: "April 26, 2026",
+    readTime: "22 min read",
+    content: blog13,
+    coverImage: "https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&q=80&w=1200"
+  },
+  {
+    id: "14",
+    title: "Vision Transformers (ViT) vs. CNNs for Real-Time Traffic Analysis in 2026",
+    slug: "vit-vs-cnns-traffic-analysis-2026",
+    excerpt: "Why the industry is moving from pure CNNs to Hybrid-ViT architectures for dense urban traffic understanding and behavior prediction.",
+    category: "Technical Guides",
+    date: "April 24, 2026",
+    readTime: "20 min read",
+    content: blog14,
+    coverImage: "https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&q=80&w=1200"
+  },
+  {
+    id: "15",
+    title: "Sensor Fusion Algorithms: Combining LiDAR and Camera Data for ADAS",
+    slug: "sensor-fusion-lidar-camera-adas",
+    excerpt: "Deep dive into asychnronous late fusion and feature-level deep fusion for robust perception in extreme weather conditions.",
+    category: "Technical Guides",
+    date: "April 22, 2026",
+    readTime: "24 min read",
+    content: blog15,
+    coverImage: "https://images.unsplash.com/photo-1539149398640-bdc7531102dd?auto=format&fit=crop&q=80&w=1200"
+  },
+  {
+    id: "16",
+    title: "Synthetic Data Generation: Accelerating CV Training for Autonomous Vehicles",
+    slug: "synthetic-data-cv-autonomous-vehicles",
+    excerpt: "How NeRFs and digital twins are solving the data scarcity problem for rare edge cases on Indian roads.",
+    category: "Technical Guides",
+    date: "April 20, 2026",
+    readTime: "21 min read",
+    content: blog16,
+    coverImage: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200"
+  },
+  {
+    id: "17",
+    title: "Edge AI Deployment: Low-Latency Pedestrian Detection in 2026",
+    slug: "edge-ai-low-latency-pedestrian-detection",
+    excerpt: "Optimizing deep learning models for sub-5ms inference on automotive-grade NPUs using mixed-precision quantization.",
+    category: "Technical Guides",
+    date: "April 18, 2026",
+    readTime: "18 min read",
+    content: blog17,
+    coverImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200"
+  },
+  {
+    id: "18",
+    title: "Regulatory Compliance for Autonomous Fleets: A Computer Vision Perspective",
+    slug: "regulatory-compliance-av-cv-perspective",
+    excerpt: "Navigating the 2026 Bharat Safety Standards through AI explainability, saliency maps, and data privacy by design.",
+    category: "AI Strategy",
+    date: "April 15, 2026",
+    readTime: "25 min read",
+    content: blog18,
+    coverImage: "https://images.unsplash.com/photo-1589232844356-4416bc5c867f?auto=format&fit=crop&q=80&w=1200"
+  },
   {
     id: "1",
     title: "How AI is Transforming the Indian Insurance Sector in 2025",
