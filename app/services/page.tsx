@@ -66,14 +66,11 @@ export default function ServicesPage() {
                       </span>
                     ))}
                   </div>
-                  <Link href={`/services/${service.slug}`}>
-                    <Button variant="outline" className="group/btn relative overflow-hidden border-primary/20 hover:border-primary/50 transition-all">
-                      <span className="relative z-10 flex items-center">
-                        Explore Solution <ArrowRight size={16} className="ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                      </span>
-                    </Button>
-                  </Link>
-                </div>
+                  <Button asChild variant="outline" size="sm" className="text-xs h-9 relative z-20">
+                    <Link href={`/services/${service.slug}`}>
+                      Explore Solution <ArrowRight size={14} className="ml-1.5" />
+                    </Link>
+                  </Button>                </div>
               </div>
             </Card>
           ))}

@@ -140,7 +140,7 @@ export default function ServiceDetailPage({ params }: ServiceDetailProps) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {deliverySteps.map((step, idx) => (
               <div key={step.title} className="relative p-8 rounded-2xl bg-surface/30 border border-border/30 hover:border-primary/30 transition-all group">
-                <div className="text-4xl font-dmSans font-black text-primary/10 absolute top-4 right-4 group-hover:text-primary/20 transition-colors">
+                <div className="text-4xl font-dmSans font-black text-primary/30 absolute top-4 right-4 group-hover:text-primary/50 transition-colors">
                   0{idx + 1}
                 </div>
                 <h3 className="text-lg font-bold text-text-primary mb-4">{step.title}</h3>
@@ -159,16 +159,16 @@ export default function ServiceDetailPage({ params }: ServiceDetailProps) {
               Our experts are ready to discuss your specific requirements and build a custom {service.title.toLowerCase()} solution that scales with your ambition.
             </p>
             <div className="flex flex-col sm:flex-row gap-6">
-              <Link href="/contact">
-                <Button size="lg" className="bg-white text-primary hover:bg-white/90 px-10 h-14 text-base font-bold shadow-xl shadow-black/20">
+              <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 px-10 h-14 text-base font-bold shadow-xl shadow-black/20">
+                <Link href="/contact">
                   Start a Consultation
-                </Button>
-              </Link>
-              <Link href="/services">
-                <Button size="lg" variant="outline" className="border-white/20 text-white bg-transparent hover:bg-white/10 px-10 h-14 text-base font-bold backdrop-blur-sm">
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="border-white/20 text-white bg-transparent hover:bg-white/10 px-10 h-14 text-base font-bold backdrop-blur-sm">
+                <Link href="/services">
                   View All Services
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
