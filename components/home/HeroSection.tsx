@@ -70,32 +70,36 @@ export default function HeroSection() {
                 title: "OI Alpha",
                 desc: "Institutional-grade options analytics for professional derivatives markets.",
                 icon: <div className="w-10 h-10 rounded-lg bg-orange-500/10 text-orange-500 flex items-center justify-center font-bold text-xs">OI</div>,
-                tag: "Live Now"
+                tag: "Live Now",
+                href: "/products/oialpha"
               },
               {
                 title: "BespokeCV",
                 desc: "AI-powered resume optimization built for global tech talent.",
                 icon: <div className="w-10 h-10 rounded-lg bg-blue-500/10 text-blue-500 flex items-center justify-center font-bold text-xs">CV</div>,
-                tag: "Popular"
+                tag: "Popular",
+                href: "/products/bespokecv"
               },
               {
                 title: "VigilDrive Product",
                 desc: "AI-powered driver monitoring system for real-time fatigue and distraction detection.",
                 icon: <div className="w-10 h-10 rounded-lg bg-red-500/10 text-red-500 flex items-center justify-center font-bold text-xs">VD</div>,
-                tag: "Safety"
+                tag: "Safety",
+                href: "/products/vigildrive"
               }
             ].map((item, i) => (
-              <div 
-                key={i}
-                className="group p-8 rounded-2xl border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 text-left relative overflow-hidden"
-              >
-                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                   {item.icon}
+              <Link key={i} href={item.href}>
+                <div 
+                  className="group h-full p-8 rounded-2xl border bg-card/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300 text-left relative overflow-hidden cursor-pointer"
+                >
+                  <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                     {item.icon}
+                  </div>
+                  <div className="text-[10px] font-bold uppercase tracking-widest text-primary mb-4 block">{item.tag}</div>
+                  <h3 className="text-xl font-syne font-bold mb-3">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
                 </div>
-                <div className="text-[10px] font-bold uppercase tracking-widest text-primary mb-4 block">{item.tag}</div>
-                <h3 className="text-xl font-syne font-bold mb-3">{item.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
-              </div>
+              </Link>
             ))}
           </motion.div>
         </div>

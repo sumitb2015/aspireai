@@ -26,7 +26,7 @@ export default function SectionHeading({
           {eyebrow}
         </span>
       )}
-      <h2 className="text-fluid-h2 mb-4">
+      <h2 className="text-fluid-h2 mb-4 font-dmSans">
         {heading}
       </h2>
       {subheading && (

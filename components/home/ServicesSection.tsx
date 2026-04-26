@@ -16,7 +16,7 @@ export default function ServicesSection() {
           subheading="We build the future with custom-trained models and scalable AI architectures."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {SERVICES.map((service) => (
             <Link key={service.id} href={`/services/${service.slug}`}>
               <Card className="h-full border-muted hover:border-primary/50 bg-card/30 backdrop-blur-sm group cursor-pointer transition-all duration-300">
@@ -24,7 +24,7 @@ export default function ServicesSection() {
                   <div className="mb-4 p-3 rounded-lg bg-primary/10 w-fit text-primary group-hover:scale-110 transition-transform duration-300">
                     <service.icon size={24} />
                   </div>
-                  <CardTitle className="text-xl font-syne group-hover:text-primary transition-colors">
+                  <CardTitle className="text-xl font-dmSans group-hover:text-primary transition-colors">
                     {service.title}
                   </CardTitle>
                 </CardHeader>

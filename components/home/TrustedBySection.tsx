@@ -39,7 +39,7 @@ export default function TrustedBySection() {
           {[...TECH_STACK, ...TECH_STACK].map((tech, i) => (
             <div 
               key={i} 
-              className="text-2xl md:text-3xl font-syne font-black text-muted-foreground/20 hover:text-primary/40 transition-colors cursor-default select-none"
+              className="text-2xl md:text-3xl font-syne font-black text-muted-foreground/50 hover:text-primary/70 transition-colors cursor-default select-none"
             >
               {tech}
             </div>

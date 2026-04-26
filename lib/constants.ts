@@ -7,7 +7,9 @@ import {
   FileText,
   Rocket,
   Shield,
-  Globe
+  Globe,
+  Database,
+  Tags
 } from "lucide-react";
 
 export const SITE_CONFIG = {
@@ -40,6 +42,7 @@ export const PRODUCTS = [
     tagline: "Intelligent Driver Safety",
     description: "Advanced computer vision-powered driver monitoring system. Real-time detection of fatigue, distraction, and unsafe driving patterns to prevent accidents.",
     url: "/contact",
+    featuresUrl: "/products/vigildrive",
     category: "Computer Vision · Fleet Safety",
     features: ["Fatigue Detection", "Distraction Monitoring", "AI-Powered Alerts", "Behavior Analytics"],
     accentColor: "#EF4444",
@@ -52,6 +55,7 @@ export const PRODUCTS = [
     tagline: "Professional Options Analytics",
     description: "Professional-grade options analytics for professional derivatives traders. Real-time OI tracking, Greeks, IV surface, and AI-powered market insights.",
     url: "https://oialpha.com",
+    featuresUrl: "/products/oialpha",
     category: "Fintech · Options Trading",
     features: ["Open Interest Tracking", "IV Surface", "Strategy Builder", "AI Narratives"],
     accentColor: "#FF6B35",
@@ -64,6 +68,7 @@ export const PRODUCTS = [
     tagline: "AI-Powered Resume Builder",
     description: "AI-powered resume builder for global job seekers. ATS-friendly templates, one-click generation, and smart content suggestions tailored for modern hiring platforms.",
     url: "https://bespokecv.in",
+    featuresUrl: "/products/bespokecv",
     category: "Career Tech · HR",
     features: ["ATS Optimized", "AI Content", "45+ Templates", "Global Compatibility"],
     accentColor: "#00D4FF",
@@ -73,6 +78,44 @@ export const PRODUCTS = [
 ];
 
 export const SERVICES = [
+  {
+    id: "data-annotation",
+    title: "Data Annotation & Labeling",
+    seoTitle: "Data Annotation & Labeling Offering | High-Quality AI Data Labeling",
+    seoDescription: "Explore our comprehensive Data Annotation and Labeling offering. We provide highly accurate, secure image, video, and text labeling services for Computer Vision and GenAI models.",
+    seoKeywords: ["data annotation offering", "data labeling services", "AI data labeling", "computer vision annotation", "NLP labeling", "RLHF services"],
+    description: "Accelerate AI development with 15x faster labeling and 99.99% accuracy using state-of-the-art automated workflows.",
+    icon: Database,
+    slug: "data-annotation",
+    content: [
+      {
+        heading: "Enterprise-Grade Annotation with 99.99% Accuracy",
+        text: "High-quality annotated data is the bedrock of reliable AI. We provide enterprise-grade, human-in-the-loop (HITL) data labeling services that turn raw datasets into precise training signals. Our multi-tier QA workflows guarantee an industry-leading 99.99% accuracy rate, strictly adhering to enterprise SLAs."
+      },
+      {
+        heading: "AI-Powered Automated vs. Manual Annotation",
+        text: "Traditional manual labeling requires 10+ hours per 1,000 images; our AI-driven automated pipeline slashes this to just 30 minutes. By integrating tools like Unitlab AI and SegmentsAI, we achieve 15x faster acceleration and 5x cost reduction, enabling enterprises to reach production 1-3 months ahead of schedule while freeing up 60% of engineering resources."
+      },
+      {
+        heading: "Advanced Computer Vision & Sensor Fusion",
+        text: "We power autonomous systems, robotics, and geospatial AI through pixel-perfect semantic segmentation, 3D point cloud annotation, and LiDAR sensor fusion. Our workforce is trained on Labelbox and CVAT to handle complex 3D cuboid annotations, polyline tracking, and temporal object tracking across thousands of frames."
+      },
+      {
+        heading: "Generative AI: RLHF & Red Teaming",
+        text: "In the era of Generative AI, alignment is critical. We offer specialized Reinforcement Learning from Human Feedback (RLHF), prompt engineering, and model red teaming. We evaluate model responses for toxicity, hallucinations, and factual accuracy, tailoring the output to your specific enterprise taxonomy."
+      }
+    ],
+    details: {
+      tagline: "15x Faster Labeling. 99.99% Accuracy. Secure & Reliable.",
+      capabilities: [
+        "LiDAR & 3D Point Cloud Fusion",
+        "Pixel-Perfect Semantic Segmentation",
+        "RLHF & Model Red Teaming",
+        "Automated QA & Consensus Loops"
+      ],
+      techStack: ["Unitlab AI", "Labelbox", "SegmentsAI", "CVAT", "Python"]
+    }
+  },
   {
     id: "conversational-ai",
     title: "Conversational AI",
@@ -175,34 +218,39 @@ export const SERVICES = [
   {
     id: "intelligent-agents",
     title: "Intelligent Agents",
-    seoTitle: "Autonomous AI Agents Development for Enterprise | AspireAI",
-    seoDescription: "Automate complex enterprise workflows with autonomous AI agents. We build secure, multi-agent systems using AutoGPT and CrewAI for scalable operations.",
-    description: "Autonomous agents that can plan, execute, and learn from complex tasks.",
+    seoTitle: "Autonomous AI Agents & Multi-Agent Systems | Enterprise Solutions",
+    seoDescription: "Deploy sophisticated multi-agent AI systems for supply chain, customer success, and finance. We leverage CrewAI, LangGraph, and AutoGPT for enterprise automation.",
+    seoKeywords: ["AI agents", "autonomous agents", "multi-agent systems", "CrewAI development", "LangGraph agents", "enterprise AI automation", "agentic RPA"],
+    description: "Deploy autonomous, multi-agent swarms capable of complex reasoning, tool calling, and executing multi-step enterprise workflows.",
     icon: Bot,
     slug: "intelligent-agents",
     content: [
       {
-        heading: "Leading AI Agent Development Company",
-        text: "The future of automation lies in autonomous agents. We are a pioneer AI agent development company in India, building multi-agent systems that can plan, reason, and execute complex workflows without constant human intervention."
+        heading: "Enterprise Multi-Agent Orchestration",
+        text: "We move beyond single-prompt LLMs to build autonomous multi-agent systems using LangGraph and CrewAI. By deploying specialized agent swarms with distinct roles (e.g., Researcher, Analyst, Executor), we enable complex, multi-step reasoning and collaborative problem-solving that mimics human operational teams."
       },
       {
-        heading: "Autonomous AI Agents for Enterprise Workflows",
-        text: "We leverage frameworks like CrewAI, LangGraph, and AutoGPT to build agents that integrate directly with your existing tools—from CRM systems to proprietary databases. These agents don't just chat; they perform work, reducing operational overhead for large enterprises."
+        heading: "Real-World Use Cases & Impact",
+        text: "Our agents drive measurable ROI across industries: \n• Automated Financial Research: Agents autonomously scrape SEC filings, analyze sentiment, and generate competitive intelligence reports.\n• Intelligent Customer Success: L1/L2 support agents capable of querying CRM APIs, issuing refunds, and updating tickets, reducing resolution times by up to 80%.\n• Supply Chain Automation: Agentic RPA systems that monitor inventory databases, negotiate with supplier APIs, and dynamically reroute logistics during disruptions."
       },
       {
-        heading: "Multi-Agent Orchestration & Continuous Learning",
-        text: "Our intelligent agents are designed for continuous learning and adaptation. By orchestrating multiple specialized agents to work in harmony, we solve problems that single-model LLMs cannot. We focus on reliability, ensuring every agent action is traceable and aligned with business goals."
+        heading: "Advanced Tool Integration & Semantic Memory",
+        text: "Our agents don't just chat—they act. We equip them with custom RAG (Retrieval-Augmented Generation) pipelines, semantic vector memory (Pinecone/Milvus), and deterministic API tool-calling capabilities. This allows agents to read proprietary databases, execute code, send emails, and update enterprise systems (Salesforce, SAP, Jira) autonomously."
+      },
+      {
+        heading: "Reliability & Human-in-the-Loop (HITL)",
+        text: "Enterprise automation requires trust. We implement ReAct (Reason + Act) architectures with strict guardrails, explicit state management, and continuous learning loops. Critical decisions trigger Human-in-the-Loop (HITL) approval gates, ensuring complete auditability and compliance with corporate governance."
       }
     ],
     details: {
-      tagline: "Automate complexity with autonomy.",
+      tagline: "Deploy specialized agent swarms to automate complex, multi-step enterprise workflows.",
       capabilities: [
-        "Autonomous Task Planning",
-        "Multi-Agent Orchestration",
-        "Tool Integration (APIs, DBs)",
-        "Continuous Learning Loops"
+        "Multi-Agent Swarm Orchestration",
+        "Deterministic API Tool Calling",
+        "ReAct Architecture & Semantic Memory",
+        "Human-in-the-Loop (HITL) Workflows"
       ],
-      techStack: ["AutoGPT", "CrewAI", "LangGraph", "Docker"]
+      techStack: ["LangGraph", "CrewAI", "AutoGPT", "Pinecone", "Python"]
     }
   }
 ];

@@ -13,50 +13,67 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <div className="pt-32 pb-24 px-6">
-      <div className="max-w-7xl mx-auto">
-        <SectionHeading 
-          eyebrow="Our Expertise"
-          heading="Specialized AI Services"
-          subheading="We provide end-to-end AI development, from strategic consulting to deploying high-scale production systems."
-          align="left"
-          className="mb-20"
-        />
+    <div className="pt-32 pb-24 px-6 relative overflow-hidden">
+      {/* Premium Background Accents */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent-primary/5 blur-[120px] rounded-full translate-y-1/2 -translate-x-1/2" />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {SERVICES.map((service) => (
-            <Card key={service.id} className="p-8 md:p-12 flex flex-col group">
-              <div className="flex items-center gap-6 mb-8">
-                <div className="p-4 rounded-2xl bg-accent-primary/10 text-accent-primary group-hover:bg-accent-primary group-hover:text-background transition-all duration-500">
-                  <service.icon size={36} />
-                </div>
-                <h2 className="text-3xl font-syne font-bold">{service.title}</h2>
-              </div>
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-3xl mb-24">
+          <SectionHeading 
+            eyebrow="Expertise & Solutions"
+            heading="Specialized AI Services for the Global Enterprise"
+            subheading="We bridge the gap between AI research and production-grade reality, delivering scalable, secure, and highly accurate intelligent systems."
+            align="left"
+            className="mb-0"
+          />
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          {SERVICES.map((service, index) => (
+            <Card key={service.id} className="relative group p-8 md:p-12 overflow-hidden bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/30 transition-all duration-500">
+              {/* Subtle hover gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
-              <p className="text-text-secondary text-lg mb-10 leading-relaxed">
-                {service.description} {service.details.tagline}
-              </p>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-                {service.details.capabilities.map((cap) => (
-                  <div key={cap} className="flex items-center gap-3 text-text-primary">
-                    <CheckCircle2 size={18} className="text-accent-primary shrink-0" />
-                    <span className="text-sm font-medium">{cap}</span>
+              <div className="relative z-10">
+                <div className="flex items-center gap-6 mb-10">
+                  <div className="p-4 rounded-2xl bg-primary/10 text-primary group-hover:scale-110 group-hover:bg-primary group-hover:text-background transition-all duration-500 shadow-lg shadow-primary/5">
+                    <service.icon size={32} />
                   </div>
-                ))}
-              </div>
+                  <h2 className="text-2xl md:text-3xl font-dmSans font-bold tracking-tight">{service.title}</h2>
+                </div>
+                
+                <p className="text-text-secondary text-base md:text-lg mb-12 leading-relaxed max-w-xl">
+                  {service.description} <span className="text-primary/80 font-medium">{service.details.tagline}</span>
+                </p>
 
-              <div className="mt-auto pt-8 border-t border-border/50 flex flex-wrap items-center justify-between gap-6">
-                <div className="flex flex-wrap gap-2">
-                  {service.details.techStack.map(tech => (
-                    <span key={tech} className="px-3 py-1 bg-surface text-text-secondary text-xs rounded-md border border-border/50">
-                      {tech}
-                    </span>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-y-5 gap-x-8 mb-12">
+                  {service.details.capabilities.map((cap) => (
+                    <div key={cap} className="flex items-start gap-3 group/cap">
+                      <div className="mt-1 p-0.5 rounded-full bg-primary/20 text-primary group-hover/cap:bg-primary group-hover/cap:text-background transition-colors">
+                        <CheckCircle2 size={14} />
+                      </div>
+                      <span className="text-sm font-medium text-text-primary/90">{cap}</span>
+                    </div>
                   ))}
                 </div>
-                <Link href={`/services/${service.slug}`}>
-                  <Button variant="outline">Learn More <ArrowRight size={16} className="ml-2" /></Button>
-                </Link>
+
+                <div className="flex flex-wrap items-center justify-between gap-8 pt-10 border-t border-border/40">
+                  <div className="flex flex-wrap gap-2.5">
+                    {service.details.techStack.map(tech => (
+                      <span key={tech} className="px-3 py-1.5 bg-surface/50 text-text-secondary text-[10px] uppercase font-bold tracking-widest rounded-lg border border-border/30 backdrop-blur-sm">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <Link href={`/services/${service.slug}`}>
+                    <Button variant="outline" className="group/btn relative overflow-hidden border-primary/20 hover:border-primary/50 transition-all">
+                      <span className="relative z-10 flex items-center">
+                        Explore Solution <ArrowRight size={16} className="ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                      </span>
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </Card>
           ))}
