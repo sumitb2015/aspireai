@@ -45,7 +45,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "April 26, 2026",
     readTime: "22 min read",
     content: blog13,
-    coverImage: "https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&q=80&w=1200"
+    coverImage: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=1200"
   },
   {
     id: "14",
@@ -56,7 +56,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "April 24, 2026",
     readTime: "20 min read",
     content: blog14,
-    coverImage: "https://images.unsplash.com/photo-1542601906972-005696517a99?auto=format&fit=crop&q=80&w=1200"
+    coverImage: "https://images.unsplash.com/photo-1545147980-c9d25a65a451?auto=format&fit=crop&q=80&w=1200"
   },
   {
     id: "15",
@@ -89,7 +89,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "April 18, 2026",
     readTime: "18 min read",
     content: blog17,
-    coverImage: "https://images.unsplash.com/photo-1496181754640-02d455ad9a3b?auto=format&fit=crop&q=80&w=1200"
+    coverImage: "https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&q=80&w=1200"
   },
   {
     id: "18",
